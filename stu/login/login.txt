@@ -1,0 +1,23 @@
+2018-04-06 17:49:36selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-06 17:49:36response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:49:36"}
+2018-04-06 17:53:22selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-06 17:53:22response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:53:22"}
+2018-04-06 17:53:28selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-06 17:53:28response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:53:28"}
+2018-04-06 17:53:31selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-06 17:53:31response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:53:31"}
+2018-04-06 17:54:18selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-06 17:54:18response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:54:18"}
+2018-04-06 18:27:25selectSql=SELECT * FROM `user` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-06 18:27:37selectSql=SELECT * FROM `user` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-06 18:27:47selectSql=SELECT * FROM `user` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-06 18:30:03selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-06 18:30:03response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728","time":"2018-04-06 18:30:03"}
+2018-04-06 18:30:21selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '123'
+2018-04-06 18:30:21response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 18:30:21"}
+2018-04-06 18:32:24selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '123'
+2018-04-06 18:32:24response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 18:32:24"}
+2018-04-06 18:32:36selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '12334'
+2018-04-06 18:32:36response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728","time":"2018-04-06 18:32:36"}
+2018-04-06 18:33:15selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '12334'
+2018-04-06 18:33:15response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-06 18:33:15"}
