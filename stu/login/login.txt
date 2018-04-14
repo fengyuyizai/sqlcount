@@ -21,3 +21,10 @@
 2018-04-06 18:32:36response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728","time":"2018-04-06 18:32:36"}
 2018-04-06 18:33:15selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '12334'
 2018-04-06 18:33:15response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-06 18:33:15"}
+2018-04-14 10:40:04selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = 'root'
+2018-04-14 10:40:09selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 10:41:00selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 10:41:03selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 10:41:16selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 10:42:39selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 10:42:40response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-14 10:42:40"}

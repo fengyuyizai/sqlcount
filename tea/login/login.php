@@ -1,5 +1,5 @@
 <?php
-    include '.../../connectsql.php';
+    include '../../connectsql.php';
     date_default_timezone_set('Asia/Shanghai');
     $username = $_POST['username'];
     $password = $_POST['password'];

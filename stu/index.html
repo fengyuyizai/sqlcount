@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="common/css/dashboard.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../common/css/jquery.mloading.css">
   </head>
 
   <body>
@@ -71,6 +72,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">sql语言在线编译</h1>
 
+<!--
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -93,20 +95,19 @@
               <span class="text-muted">Something else</span>
             </div>
           </div>
-
-          <h2 class="sub-header">Section title</h2>
+-->
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+                  <th>code</th>
+                  <th>标题</th>
+                  <th>简要介绍</th>
+                  <th>难度</th>
+                  <th>选择</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="questTbody">
                 <tr>
                   <td>1,001</td>
                   <td>Lorem</td>
@@ -114,114 +115,13 @@
                   <td>dolor</td>
                   <td>sit</td>
                 </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
               </tbody>
             </table>
           </div>
+          <nav aria-label="Page navigation">
+              <ul class="pagination" id="pagination">
+              </ul>
+            </nav>
         </div>
       </div>
     </div>
@@ -229,17 +129,88 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="common/js/jquery.js"></script>
     <script src="common/js/bootstrap.min.js"></script>
-    <script src="common/js/bootstrap.min.js"></script>
+    <script src="../common/js/jquery.mloading.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="common/js/holder.min.js"></script>
     <script>
+        // -------------全局变量start----------------
+        var page = 1;
+        var maxPage = 1;
+        var questionList = [];
+        // -------------全局变量end----------------
+        
         if (!sessionStorage.getItem("stuUsername")) {
             location.href = "/sqlcount/stu/login/login.html";
         }
         window.onload = function() {
-            
+            $("body").mLoading("show");
+            $.getJSON(`getQuestionsList.php`, (res) => {
+//                console.log('getQusetionList:' + JSON.stringify(res));
+                if (res.status == -1) {
+                    return;
+                }
+                questionList = [...res.questionList];  // 初始化数据
+                maxPage = parseInt(questionList.length / 10) + 1; // 初始化页数
+                var questionListClone = [];
+                if (res.questionList.length > 10) {
+                    questionListClone = [...res.questionList.slice(0, 10)];
+                }
+                questionListClone = [...res.questionList];
+                createQuestList(questionListClone);
+                createPage();
+            });
         };
+        
+        function createQuestList(questList) {
+            $questTbody = $('#questTbody');
+            $questTbody.find('tr').empty();
+            for (let i = 0; i < questList.length; i++) {
+                $trTemp = $('<tr></tr>');
+                $trTemp.append('<td>' + questList[i].code + '</td>');
+                $trTemp.append('<td>' + questList[i].title + '</td>');
+                $trTemp.append('<td>' + questList[i].simmessage + '</td>');
+                $trTemp.append('<td>' + questList[i].diffculty + '</td>');
+                $trTemp.append('<td><button type="button" class="btn btn-default btn-sm">选择</button></td>');
+                $questTbody.append($trTemp);
+            }
+            $("body").mLoading("hide");
+        }
+        function createPage() {
+            $pagination = $('#pagination');
+            $pagination.find('li').empty();
+            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
+            for (let i = 0; i < maxPage; i++) {
+                $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1)+ '</a></li>');
+                $pagination.append($liTemp);
+            }
+            $pagination.find('li').eq(page).addClass('active');
+            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        }
+        function choosePage(selectPage){
+            page = selectPage;
+            $pagination.find('li').eq(page).addClass('active');
+            var start = (page - 1) * 10;
+            var end = page * 10
+            var questionListClone = [...questionList.slice(start, end)];
+            $("body").mLoading("show");
+            createQuestList(questionListClone);
+        }
+        $('#pagination:first-child').click(() => {
+            page--;
+            if (page <= 1) {
+                page = 1;
+            }
+            choosePage(page);
+        });
+        $('#pagination:last-child').click(() => {
+            page++;
+            if (page >= maxPage) {
+                page = maxPage;
+            }
+            choosePage(page);
+        });
     </script>
   </body>
 </html>
