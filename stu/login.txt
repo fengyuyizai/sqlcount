@@ -1,1 +1,73 @@
 2018-04-14 15:31:40selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-14 17:52:26selectSql=CREATE TABLE Persons
+(
+Id_P int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+2018-04-14 17:52:46selectSql=CREATE TABLE Persons
+(
+Id_P int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+2018-04-14 17:57:39selectSql=CREATE TABLE `Persons` (Id_P int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255))
+2018-04-14 18:00:53selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 18:02:15selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 18:02:15response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-14 18:02:15"}
+2018-04-14 19:52:19selectSql=create table emp(
+    id int,
+    ename varchar(30),
+    age int,
+    job varchar(20)
+);
+2018-04-14 19:52:20response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-14 19:52:20"}
+2018-04-14 20:19:00selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 20:19:01response={"status":1,"msg":"\u6267\u884c\u6210\u529f","selectResult":true}
+2018-04-14 20:22:24selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 20:22:24response={"status":1,"msg":"\u6267\u884c\u6210\u529f","selectResult":true}
+2018-04-14 20:22:59selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 20:22:59response={"status":1,"msg":"\u6267\u884c\u6210\u529f","selectResult":true}
+2018-04-14 20:23:36selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 20:23:36response={"status":1,"msg":"\u6267\u884c\u6210\u529f","selectResult":true}
+2018-04-14 20:30:02selectSql=CREATE TABLE emp(
+    id INT,
+    ename VARCHAR(30),
+    age INT,
+    job VARCHAR(20)
+);
+2018-04-14 20:30:02response={"status":-1,"msg":false,"time":"2018-04-14 20:30:02"}

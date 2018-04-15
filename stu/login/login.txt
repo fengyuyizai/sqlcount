@@ -28,3 +28,5 @@
 2018-04-14 10:41:16selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
 2018-04-14 10:42:39selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
 2018-04-14 10:42:40response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-14 10:42:40"}
+2018-04-14 17:26:18selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '123'
+2018-04-14 17:26:18response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-14 17:26:18"}

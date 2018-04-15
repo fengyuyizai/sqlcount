@@ -79,8 +79,14 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">sql语言在线编译</h1>
                 <div class="table-responsive">
+                   <div>
+                       <div class="alert alert-success alert-dismissible" role="alert" id="prompt" style="display: none">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                           <span><strong>Warning!</strong> Better check yourself, you're not looking too good.</span>
+                        </div>
+                   </div>
                     <div>
-                        <textarea rows="5" clos="20" class="sqlinput"></textarea>
+                        <textarea rows="5" clos="20" class="sqlinput" id="sqlval"></textarea>
                         <button type="button" id="myButton" data-loading-text="编译中..." class="btn btn-primary sqlbutton" autocomplete="off">
                           执行
                         </button>
@@ -137,6 +143,7 @@
                 }
             });
         };
+        
         function initDom() {
             $question = $('#question');
             $question.find('h2').html(question.title);
@@ -157,10 +164,67 @@
             }
             return "";
         }
+        function testsql() {
+            var sql = $('#sqlval').val();
+            console.log('val::' + sql);
+//            const result = resolveSql(sql);
+            const params = {
+                sql : sql
+            }
+            console.log(JSON.stringify(params));       
+            $.ajax({
+                type: 'POST',
+                url: `testsql.php`,
+                data: params,
+                success: function(res) {
+                    const data = JSON.parse(res);
+                    $prompt = $('#prompt');
+                   $prompt.show();
+                    if (data.status == 1) {
+                        $prompt.removeClass().addClass('alert alert-success alert-dismissible');
+                        $prompt.find('span').remove()
+                        $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
+                    } else {
+                        $prompt.find('span').remove()
+                        $prompt.removeClass().addClass('alert alert-danger alert-dismissible');
+                        $prompt.append('<span><strong>Error!</strong>  ' + data.msg + '</span>');
+                    }
+                    console.log('success:' + JSON.stringify(data));
+                },
+                error: function(res) {
+                    console.log('error:' + JSON.stringify(res));
+                }
+            })
+        }
+        
+        function resolveSql(sql) {
+            var table = ''
+            var type = 'select'
+            var sqlList = sql.split(' '); // 分割字符串
+            type = sqlList[0].toLocaleLowerCase() == 'select' ? 'select' : 'unSelect';
+            var beforeTablename = ['table', 'on', 'from', 'into', 'update'];
+            sqlList = sqlList.filter((item) => { // 去除空项
+                return item.length > 0;
+            });
+//            console.log('sqlList' + sqlList);
+            for (let i = 0; i < sqlList.length ; i++) {
+                if(beforeTablename.some(item =>  item == sqlList[i].toLocaleLowerCase())) {
+                    console.log('success' + sqlList[i + 1]);
+                    table = sqlList[i + 1].match(/`(.*)`/)[1];
+                    break;
+                }
+            };
+            return {
+                table,
+                type
+            }
+        }
+        
         // 监听事件： 代码编译按钮
         $('#myButton').on('click', function() {
             var $btn = $(this).button('loading')
             // business logic...
+            testsql();
             setTimeout(() => {
                 $btn.button('reset');
             },2000);
