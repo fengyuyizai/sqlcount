@@ -22,6 +22,9 @@ class SqlLog
 
     // SELECT 正则条件
     private static $selectExpression = '/((SELECT.+?FROM)|(LEFT\\s+JOIN|JOIN|LEFT))[\\s`]+?(\\w+)[\\s`]+?/is';
+    
+    //create table 正则条件 
+    private static $createExpression = '/CREATE\s+?TABLE[\s`]+?(\w+)[\s`]+?/is';
 
     /**
      * @return array 返回查询操作的所有表名
@@ -54,6 +57,15 @@ class SqlLog
     {
         return self::getTableNames(self::$deleteExpression);
     }
+
+     /**
+     * @return array 返回创建表操作的所有表名
+     */
+    public static function createTableNames()
+    {
+        return self::getTableNames(self::$createExpression);
+    }
+
 
     /**
      * 根据正则表达式获取所有操作的表名
