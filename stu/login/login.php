@@ -2,7 +2,7 @@
     include '../../connectsql.php';
     date_default_timezone_set('Asia/Shanghai');
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = MD5($_POST['password']);
     $selectSql = "SELECT * FROM `studentmanage` where `username` = '".$username."' AND `password` = '".$password."'";
     file_put_contents('login.txt',date('Y-m-d H:i:s',time())."selectSql=".$selectSql."\r\n",FILE_APPEND );
     $selectResult = $mysqli->query($selectSql)->fetch_assoc();

@@ -73,9 +73,7 @@
                     <p>结果</p>
                     <p></p>
                 </div>
-
             </div>
-
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">sql语言在线编译</h1>
                 <div class="table-responsive">
@@ -92,6 +90,14 @@
                         </button>
                     </div>
                 </div>
+                <table class="table table-striped">
+                    <thead id="resultheader">
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTbody">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -182,8 +188,9 @@
                    $prompt.show();
                     if (data.status == 1) {
                         $prompt.removeClass().addClass('alert alert-success alert-dismissible');
-                        $prompt.find('span').remove()
+                        $prompt.find('span').remove();
                         $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
+                        createResultTable(data.data);
                     } else {
                         $prompt.find('span').remove()
                         $prompt.removeClass().addClass('alert alert-danger alert-dismissible');
@@ -197,6 +204,30 @@
             })
         }
         
+        function createResultTable(data) {
+            $resultheader = $('#resultheader');
+            $resultTbody = $('#resultTbody');
+            $resultheader.empty();
+            $HtrTemp = $('<tr></tr>');
+            if (data.field.length > 0) {
+                for(let i= 0; i < data.field.length; i++) {
+                    $HtrTemp.append('<th>' + data.field[i] + '</th>');
+                }
+                $resultheader.append($HtrTemp);
+            }
+            if (data.content.length > 0) {
+                for(let j = 0; j < data.content.length; j++) {
+                    $BtrTemp = $('<tr></tr>')
+                    for(let i= 0; i < data.field.length; i++) {
+                        if (data.content[j].data.field[i]) {
+                            $BtrTemp.append('<td>' + data.content[j].data.field[i] + '</td>');
+                        }
+                    }
+                    $resultTbody.append($BtrTemp);
+                }
+            }
+        }
+
         function resolveSql(sql) {
             var table = ''
             var type = 'select'

@@ -168,3 +168,8 @@
 2018-04-15 10:57:11selectSql=SELECT * FROM `studentmanage` where `username` = 'root2'
 2018-04-15 10:57:11insertSql=INSERT INTO `studentmanage` (`username`, `password`) VALUES ('root2','202cb962ac59075b964b07152d234b70')
 2018-04-15 10:57:11response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-15 10:57:11"}
+2018-04-17 13:52:51selectSql=SELECT * FROM `studentmanage` where `username` = 'root'
+2018-04-17 13:52:51response={"status":-1,"msg":"sorry,\u8be5\u7528\u6237\u540d\u5df2\u6ce8\u518c\uff0c\u8bf7\u91cd\u8bd5","time":"2018-04-17 13:52:51"}
+2018-04-17 13:53:29selectSql=SELECT * FROM `studentmanage` where `username` = 'root2'
+2018-04-17 13:53:29insertSql=INSERT INTO `studentmanage` (`username`, `password`) VALUES ('root2','202cb962ac59075b964b07152d234b70')
+2018-04-17 13:53:29response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-17 13:53:29"}
