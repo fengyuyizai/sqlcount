@@ -130,12 +130,8 @@
                     $response['data'] = [];
                     echo json_encode($response,true);
                     exit;
-                }
-                
-                      
+                }     
             }
-
-
             $result = $mysqli->query($sql);
             $res = $mysqli->affected_rows;
             if (!empty($res)  && $res != 0) {
@@ -164,13 +160,10 @@
                             while($row = $fieldResult->fetch_assoc()){
                                 $field[$i++] = $row['Field'];                
                             }
-
                         } else {  //字段名查询失败
                             $response['status'] = -1;
                             $response['msg'] = $mysqli->errno.':'.$mysqli->error;
-                        } 
-                        
-
+                        }
                     } else {                   //查询全部语句执行失败
                         $response['status'] = -1;
                         $response['msg'] = $mysqli->errno.':'.$mysqli->error;
@@ -182,27 +175,12 @@
                     $response['status'] = -1;
                     $response['msg'] = '表名查询失败';
                 }
-
-
-
-
-
-
-
-
-
-
-
-
             }  else {
                 $response['status'] = -1;
                 $response['msg'] = $mysqli->errno.':'.$mysqli->error;
                 $response['time'] = date("Y-m-d H:i:s", time());
                 $response['data'] = [];
             }
-        
-
-        
     }
         echo json_encode($response,true);
 

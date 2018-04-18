@@ -208,10 +208,17 @@
             $resultheader = $('#resultheader');
             $resultTbody = $('#resultTbody');
             $resultheader.empty();
+            $resultTbody.empty();
             $HtrTemp = $('<tr></tr>');
             if (data.field.length > 0) {
                 for(let i= 0; i < data.field.length; i++) {
-                    $HtrTemp.append('<th>' + data.field[i] + '</th>');
+                    let status = true;
+                    if (data.content.length > 0) {
+                        status = data.content[0][data.field[i]];
+                    }
+                    if(status) {
+                        $HtrTemp.append('<th>' + data.field[i] + '</th>');
+                    }
                 }
                 $resultheader.append($HtrTemp);
             }
@@ -219,8 +226,11 @@
                 for(let j = 0; j < data.content.length; j++) {
                     $BtrTemp = $('<tr></tr>')
                     for(let i= 0; i < data.field.length; i++) {
-                        if (data.content[j].data.field[i]) {
-                            $BtrTemp.append('<td>' + data.content[j].data.field[i] + '</td>');
+                        let key = data.field[i];
+//                        console.log('key' + key);
+//                        console.log('value:' + JSON.stringify(data.content[j][key]));
+                        if (data.content[j][key]) {
+                            $BtrTemp.append('<td>' + data.content[j][key] + '</td>');
                         }
                     }
                     $resultTbody.append($BtrTemp);
