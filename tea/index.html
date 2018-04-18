@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
 
@@ -17,226 +16,223 @@
 
     <!-- Custom styles for this template -->
     <link href="common/css/dashboard.css" rel="stylesheet">
-  </head>
+    <link type="text/css" rel="stylesheet" href="common/css/jquery.mloading.css">
+</head>
 
-  <body>
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">sql语言在线编译系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
     </nav>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="index.html">题库总览<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">学生完成情况</a></li>
+                    <li><a href="#">学生完成情况</a></li>
+                    <li><a href="#">Export</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Nav item</a></li>
+                    <li><a href="">Nav item again</a></li>
+                    <li><a href="">One more nav</a></li>
+                    <li><a href="">Another nav item</a></li>
+                    <li><a href="">More navigation</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Nav item again</a></li>
+                    <li><a href="">One more nav</a></li>
+                    <li><a href="">Another nav item</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">sql语言在线编译</h1>
+                <div class="table-responsive">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onClick="addQuestion()">
+                      添加题目
+                    </button>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>code</th>
+                                <th>标题</th>
+                                <th>简要介绍</th>
+                                <th>难度</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="questTbody">
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" id="pagination">
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
-
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
     </div>
 
+
+    <!--   模态框start    -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal -->
+    <!--   模态框start-->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="common/js/jquery.js"></script>
     <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/jquery.mloading.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="common/js/holder.min.js"></script>
     <script>
-        if (!sessionStorage.getItem("teaUsername")) {
-            location.href = "/sqlcount/tea/login/login.html";
+        // -------------全局变量start----------------
+        var page = 1;
+        var maxPage = 1;
+        var questionList = [];
+        // -------------全局变量end----------------
+
+        if (!sessionStorage.getItem("stuUsername")) {
+            location.href = "/sqlcount/stu/login/login.html";
         }
+        window.onload = function() {
+            $("body").mLoading("show");
+            $.getJSON(`getQuestionsList.php`, (res) => {
+                //                console.log('getQusetionList:' + JSON.stringify(res));
+                if (res.status == -1) {
+                    return;
+                }
+                questionList = [...res.questionList]; // 初始化数据
+                maxPage = parseInt(questionList.length / 10) + 1; // 初始化页数
+                var questionListClone = [];
+                if (res.questionList.length > 10) {
+                    questionListClone = [...res.questionList.slice(0, 10)];
+                }
+                questionListClone = [...res.questionList];
+                createQuestList(questionListClone);
+                createPage();
+            });
+        };
+
+        function createQuestList(questList) {
+            $questTbody = $('#questTbody');
+            $questTbody.find('tr').empty();
+            for (let i = 0; i < questList.length; i++) {
+                $trTemp = $('<tr></tr>');
+                $trTemp.append('<td>' + questList[i].code + '</td>');
+                $trTemp.append('<td>' + questList[i].title + '</td>');
+                $trTemp.append('<td>' + questList[i].simmessage + '</td>');
+                $trTemp.append('<td>' + questList[i].diffculty + '</td>');
+                $trTemp.append('<td><button onClick="goJump(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">选择</button>' +
+                    '<button onClick="updata(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">修改</button>' +
+                    '<button onClick="remove(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">删除</button></td>');
+                $questTbody.append($trTemp);
+            }
+            $("body").mLoading("hide");
+        }
+
+        function createPage() {
+            $pagination = $('#pagination');
+            $pagination.find('li').empty();
+            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
+            for (let i = 0; i < maxPage; i++) {
+                $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1) + '</a></li>');
+                $pagination.append($liTemp);
+            }
+            $pagination.find('li').eq(page).addClass('active');
+            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        }
+
+        function choosePage(selectPage) {
+            page = selectPage;
+            $pagination.find('li').eq(page).addClass('active');
+            var start = (page - 1) * 10;
+            var end = page * 10
+            var questionListClone = [...questionList.slice(start, end)];
+            $("body").mLoading("show");
+            createQuestList(questionListClone);
+        }
+        // -----------------监听页码上一页下一页-start------------
+        $('#pagination:first-child').click(() => {
+            page--;
+            if (page <= 1) {
+                page = 1;
+            }
+            choosePage(page);
+        });
+        $('#pagination:last-child').click(() => {
+            page++;
+            if (page >= maxPage) {
+                page = maxPage;
+            }
+            choosePage(page);
+        });
+        // -----------------监听页码上一页下一页-end------------
+
+        function goJump(code) {
+            setCookie('code', code, 2 * 60 * 60 * 1000);
+            location.href = 'sqlwrite.html';
+        }
+
+        function updata(code) {
+
+        }
+
+        function remove(code) {
+
+        }
+
+        function addQuestion() {
+
+        }
+
+        function setCookie(c_name, value, expiredays) {
+            var exdate = new Date();
+            exdate.setTime(Number(exdate) + expiredays);
+            document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+        }
+
     </script>
-  </body>
+</body>
+
 </html>
