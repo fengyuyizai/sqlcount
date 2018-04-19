@@ -1,0 +1,34 @@
+2018-04-19 15:41:21selectSql=
+2018-04-19 17:32:01selectSql=
+2018-04-19 17:33:27selectSql=
+2018-04-19 17:34:50selectSql=
+2018-04-19 17:39:07selectSql=
+2018-04-19 17:41:56selectSql=
+2018-04-19 17:42:44selectSql=INSERt INTO `questionmanage` (title, simmessage, detmessage, result, testsql) VAULES (1231, 12313, , 13123, 13123)
+2018-04-19 17:44:01selectSql=INSERt INTO `questionmanage` (title, simmessage, detmessage, result, testsql) VAULES (3123, 12424, , 1242, 124)
+2018-04-19 17:45:41selectSql=INSERt INTO `questionmanage` (title, simmessage, detmessage, result, testsql) VAULES (题目1, 哥哥, 124142, 12321, 1231)
+2018-04-19 17:47:53selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VAULES (题目21, 发违法, 4124124, 12313, 12312312)
+2018-04-19 17:48:58selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VAULES (发, 213, 3123, 123, 14221)
+2018-04-19 17:48:58response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:48:58"}
+2018-04-19 17:51:14selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VAULES (发呢无法, 12312, 12 发文, 214124, 4饿啊)
+2018-04-19 17:51:14response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:51:14"}
+2018-04-19 17:53:41selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES (题目2, 简要介绍, 发文, 12312, 发文)
+2018-04-19 17:53:41response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:53:41"}
+2018-04-19 17:55:55selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES (激发额, 艾尔发, 14 发, 312, 12额发你)
+2018-04-19 17:55:55response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:55:55"}
+2018-04-19 17:56:19selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES (激发额, 艾尔发, 14 发, 312, 12额发你)
+2018-04-19 17:56:19response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:56:19"}
+2018-04-19 17:56:56selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES (激发额, 艾尔发, 14 发, 312, 12额发你)
+2018-04-19 17:56:56response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:56:56"}
+2018-04-19 17:57:19selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES (发违法, 发违法, 发违法, 发我份, 发文啊)
+2018-04-19 17:57:19response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 17:57:19"}
+2018-04-19 17:58:04selectSql=INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES ('发违法', '份14额', '2131', '213', '法尔')
+2018-04-19 17:58:04response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-19 17:58:04"}
+2018-04-19 18:11:41selectSql=UPDATE `questionlist` SET title='题目1', simmessage='简要介绍', detmessage='', result='', testsql='题目1' WHERE code = '1001'
+2018-04-19 18:11:41response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-19 18:11:41"}
+2018-04-19 18:11:48selectSql=UPDATE `questionlist` SET title='题目1', simmessage='简要介绍', detmessage='阿飞挖坟', result='', testsql='题目1' WHERE code = '1001'
+2018-04-19 18:11:48response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-19 18:11:48"}
+2018-04-19 18:33:19selectSql=DELETE * FROM `questionlist` WHERE code='0'
+2018-04-19 18:33:19response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 18:33:19"}
+2018-04-19 18:33:25selectSql=DELETE * FROM `questionlist` WHERE code='0'
+2018-04-19 18:33:25response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 18:33:25"}

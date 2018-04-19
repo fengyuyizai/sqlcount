@@ -192,7 +192,7 @@
                         $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
                         createResultTable(data.data);
                     } else {
-                        $prompt.find('span').remove()
+                        $prompt.find('span').remove();
                         $prompt.removeClass().addClass('alert alert-danger alert-dismissible');
                         $prompt.append('<span><strong>Error!</strong>  ' + data.msg + '</span>');
                     }
