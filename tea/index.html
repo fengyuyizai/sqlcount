@@ -17,11 +17,13 @@
     <!-- Custom styles for this template -->
     <link href="common/css/dashboard.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="common/css/jquery.mloading.css">
+    <link type="text/css" rel="stylesheet" href="common/css/popconfirm.css">
 </head>
 <style type="text/css">
-    .modal-body div{
+    .modal-body div {
         margin: 10px 0;
     }
+
     .sqlinput {
         position: relative;
         z-index: 2;
@@ -30,6 +32,7 @@
         width: 100%;
         height: 80px;
     }
+
     .rowInput {
         height: 78px;
         border: 1px solid #ccc;
@@ -43,7 +46,9 @@
         vertical-align: middle;
         display: inline-block;
     }
+
 </style>
+
 <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -132,24 +137,24 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon3">题目</span>
-                      <input type="text" class="form-control" id="questTitle" aria-describedby="basic-addon3">
+                        <span class="input-group-addon" id="basic-addon3">题目</span>
+                        <input type="text" class="form-control" id="questTitle" aria-describedby="basic-addon3">
                     </div>
                     <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon3">简要介绍</span>
-                      <input type="text" class="form-control" id="questSimMessage" aria-describedby="basic-addon3">
+                        <span class="input-group-addon" id="basic-addon3">简要介绍</span>
+                        <input type="text" class="form-control" id="questSimMessage" aria-describedby="basic-addon3">
                     </div>
                     <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon3">结果案例</span>
-                      <input type="text" class="form-control" id="questReasult" aria-describedby="basic-addon3">
+                        <span class="input-group-addon" id="basic-addon3">结果案例</span>
+                        <input type="text" class="form-control" id="questReasult" aria-describedby="basic-addon3">
                     </div>
                     <div class="input-group">
-                      <span class="input-group-addon">校验结果sql</span>
-                      <textarea rows="5" clos="20" class="sqlinput" id="questsql"></textarea>
+                        <span class="input-group-addon">校验结果sql</span>
+                        <textarea rows="5" clos="20" class="sqlinput" id="questsql"></textarea>
                     </div>
                     <div class="input-group">
-                      <span class="input-group-addon">详细介绍</span>
-                      <textarea rows="5" clos="20" class="sqlinput" id="detMessage"></textarea>
+                        <span class="input-group-addon">详细介绍</span>
+                        <textarea rows="5" clos="20" class="sqlinput" id="detMessage"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -162,20 +167,20 @@
     <!-- /.modal -->
     <!-- Modal -->
     <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">警告</h4>
-          </div>
-          <div class="modal-body" id="errorResult">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-<!--            <button type="button" class="btn btn-primary">Save changes</button>-->
-          </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">警告</h4>
+                </div>
+                <div class="modal-body" id="errorResult">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <!--   模态框start-->
     <!-- Bootstrap core JavaScript
@@ -186,12 +191,14 @@
     <script src="common/js/jquery.mloading.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="common/js/holder.min.js"></script>
+    <script src="common/js/jquery.popconfirm.js"></script>
     <script>
         // -------------全局变量start----------------
         var page = 1;
         var maxPage = 1;
         var questionList = [];
         var selectCode = 0;
+        var removeStatus = true;
         // -------------全局变量end----------------
 
         if (!sessionStorage.getItem("stuUsername")) {
@@ -227,7 +234,12 @@
                 $trTemp.append('<td>' + questList[i].diffculty + '</td>');
                 $trTemp.append('<td><button onClick="goJump(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">选择</button>' +
                     '<button onClick="updataquest(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">修改</button>' +
-                    '<button onClick="remove(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">删除</button></td>');
+                    '<button ' +
+                    'onClick="remove(' + questList[i].code + ')" ' +
+                    'type="button" ' +
+                    'class="btn btn-sm btn-danger confirm" ' +
+                    'data-toggle="confirmation" ' +
+                    '>删除</button></td>');
                 $questTbody.append($trTemp);
             }
             $("body").mLoading("hide");
@@ -277,13 +289,13 @@
         }
 
         // ---------增删改所用dom --start---------
-           $questTitle = $('#questTitle');
-           $questSimMessage = $('#questSimMessage');
-           $questResult = $('#questReasult');
-           $questsql = $('#questsql');
-           $detmessage = $('#detMessage');
-           $updata = $('#updata');
-           $add = $('#add');
+        $questTitle = $('#questTitle');
+        $questSimMessage = $('#questSimMessage');
+        $questResult = $('#questReasult');
+        $questsql = $('#questsql');
+        $detmessage = $('#detMessage');
+        $updata = $('#updata');
+        $add = $('#add');
         // ---------增删改所用dom --end---------
 
         $('#addquest').on('click', () => {
@@ -292,6 +304,7 @@
             $updata.hide();
             $add.show();
         });
+
         function updataquest(code) {
             console.log('code:' + code);
             selectCode = code;
@@ -314,24 +327,33 @@
         $updata.on('click', () => {
             const params = {
                 'code': selectCode,
-                'title' : $questTitle.val(),
-                'simmessage' : $questSimMessage.val(),
-                'detmessage' : $detmessage.val(),
-                'result' : $questResult.val(),
-                'testsql' : $questsql.val(),
+                'title': $questTitle.val(),
+                'simmessage': $questSimMessage.val(),
+                'detmessage': $detmessage.val(),
+                'result': $questResult.val(),
+                'testsql': $questsql.val(),
                 'type': 'update'
             }
             request(params);
         });
 
         function remove(code) {
+            var a = $('.confirm').popConfirm();
+            if (removeStatus) {
+                return
+            }
+            removeStatus = false;
+            if (!a) {
+                return
+            }
+            console.log('true');
             const params = {
                 'code': selectCode,
-                'title' : '',
-                'simmessage' : '',
-                'detmessage' : '',
-                'result' : '',
-                'testsql' : '',
+                'title': '',
+                'simmessage': '',
+                'detmessage': '',
+                'result': '',
+                'testsql': '',
                 'type': 'delete'
             }
             request(params);
@@ -340,19 +362,20 @@
         function addQuestion() {
             const params = {
                 'code': '',
-                'title' : $questTitle.val(),
-                'simmessage' : $questSimMessage.val(),
-                'detmessage' : $detmessage.val(),
-                'result' : $questResult.val(),
-                'testsql' : $questsql.val(),
+                'title': $questTitle.val(),
+                'simmessage': $questSimMessage.val(),
+                'detmessage': $detmessage.val(),
+                'result': $questResult.val(),
+                'testsql': $questsql.val(),
                 'type': 'add'
             }
             console.log('params=' + JSON.stringify(params));
             request(params);
         }
+
         function request(params) {
             $("body").mLoading("show");
-             $.ajax({
+            $.ajax({
                 type: 'POST',
                 url: `questionManage.php`,
                 data: params,
@@ -371,6 +394,7 @@
                 }
             });
         }
+
         function setCookie(c_name, value, expiredays) {
             var exdate = new Date();
             exdate.setTime(Number(exdate) + expiredays);

@@ -173,3 +173,6 @@
 2018-04-17 13:53:29selectSql=SELECT * FROM `studentmanage` where `username` = 'root2'
 2018-04-17 13:53:29insertSql=INSERT INTO `studentmanage` (`username`, `password`) VALUES ('root2','202cb962ac59075b964b07152d234b70')
 2018-04-17 13:53:29response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-17 13:53:29"}
+2018-04-19 20:18:47selectSql=SELECT * FROM `studentmanage` where `username` = 'root'
+2018-04-19 20:18:47insertSql=INSERT INTO `studentmanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
+2018-04-19 20:18:47response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-19 20:18:47"}
