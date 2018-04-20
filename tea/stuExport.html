@@ -80,27 +80,26 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar" id="navTitle">
-                    <li class="active"><a href="index.html">题库总览<span class="sr-only">(current)</span></a></li>
-                    <li><a href="stuExport.html">学生完成情况</a></li>
+                    <li><a href="index.html">题库总览<span class="sr-only">(current)</span></a></li>
+                    <li  class="active"><a href="stuExport.html">学生完成情况</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">sql语言在线编译</h1>
                 <div class="table-responsive">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="addquest">
+<!--                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="addquest">
                       添加题目
-                    </button>
+                    </button> -->
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>code</th>
-                                <th>标题</th>
-                                <th>简要介绍</th>
-                                <th>难度</th>
-                                <th>操作</th>
+                                <th>姓名</th>
+                                <th>年级</th>
+                                <th>历史完成数量</th>
+                                <th>查看学生完成情况</th>
                             </tr>
                         </thead>
-                        <tbody id="questTbody">
+                        <tbody id="stutbody">
                         </tbody>
                     </table>
                 </div>
@@ -122,30 +121,13 @@
                     <h4 class="modal-title" id="myModalTitle">Modal title</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">题目</span>
-                        <input type="text" class="form-control" id="questTitle" aria-describedby="basic-addon3">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">简要介绍</span>
-                        <input type="text" class="form-control" id="questSimMessage" aria-describedby="basic-addon3">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">结果案例</span>
-                        <input type="text" class="form-control" id="questReasult" aria-describedby="basic-addon3">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">校验结果sql</span>
-                        <textarea rows="5" clos="20" class="sqlinput" id="questsql"></textarea>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">详细介绍</span>
-                        <textarea rows="5" clos="20" class="sqlinput" id="detMessage"></textarea>
-                    </div>
+                	<ul class="list-group" id="stuquestion">
+					  <li class="list-group-item"><span>code</span><span>title</span></li>
+					</ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onClick="addQuestion()" id="add">添加</button>
-                    <button type="button" class="btn btn-primary" id="updata">修改</button>
+<!--                     <button type="button" class="btn btn-primary" onClick="addQuestion()" id="add">添加</button>
+                    <button type="button" class="btn btn-primary" id="updata">修改</button> -->
                 </div>
             </div>
         </div>
@@ -182,58 +164,63 @@
         // -------------全局变量start----------------
         var page = 1;
         var maxPage = 1;
-        var questionList = [];
+        var studentList = [];
         var selectCode = 0;
         var removeStatus = true;
         // -------------全局变量end----------------
 
-        $('#navTitle li').on('click', () => {
-            $(this).addClass('active').siblings().removeClass('active');
-        });
-
-
         if (!sessionStorage.getItem("teaUsername")) {
             location.href = "/sqlcount/stu/login/login.html";
         }
+
         window.onload = function() {
             $("body").mLoading("show");
-            $.getJSON(`getQuestionsList.php`, (res) => {
-                //                console.log('getQusetionList:' + JSON.stringify(res));
+            $.getJSON(`getStudentMessage.php`, (res) => {
+               console.log('getQusetionList:' + JSON.stringify(res));
                 if (res.status == -1) {
                     return;
                 }
-                questionList = [...res.questionList]; // 初始化数据
-                maxPage = parseInt(questionList.length / 10) + 1; // 初始化页数
-                var questionListClone = [];
-                if (res.questionList.length > 10) {
-                    questionListClone = [...res.questionList.slice(0, 10)];
+                studentList = [...res.studentList]; // 初始化数据
+                // console.log(studentList);
+                studentList.forEach((item) => {
+                	item.questionList = item.questionList.split(',')
+                });
+                maxPage = parseInt(studentList.length / 10) + 1; // 初始化页数
+                var studentListClone = [];
+                if (res.studentList.length > 10) {
+                    studentListClone = [...res.studentList.slice(0, 10)];
+                } else {
+	                studentListClone = [...res.studentList];
                 }
-                questionListClone = [...res.questionList];
-                createQuestList(questionListClone);
+                createQuestList(studentListClone);
                 createPage();
             });
         };
 
-        function createQuestList(questList) {
-            $questTbody = $('#questTbody');
-            $questTbody.find('tr').empty();
-            for (let i = 0; i < questList.length; i++) {
+        function createQuestList(studentList) {
+            $stutbody = $('#stutbody');
+            $stutbody.find('tr').empty();
+            for (let i = 0; i < studentList.length; i++) {
                 $trTemp = $('<tr></tr>');
-                $trTemp.append('<td>' + questList[i].code + '</td>');
-                $trTemp.append('<td>' + questList[i].title + '</td>');
-                $trTemp.append('<td>' + questList[i].simmessage + '</td>');
-                $trTemp.append('<td>' + questList[i].diffculty + '</td>');
-                $trTemp.append('<td><button onClick="goJump(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">选择</button>' +
-                    '<button onClick="updataquest(' + questList[i].code + ')" type="button" class="btn btn-default btn-sm">修改</button>' +
-                    '<button ' +
-                    'onClick="remove(' + questList[i].code + ')" ' +
-                    'type="button" ' +
-                    'class="btn btn-sm btn-danger confirm" ' +
-                    'data-toggle="confirmation" ' +
-                    '>删除</button></td>');
-                $questTbody.append($trTemp);
+                $trTemp.append('<td>' + studentList[i].name + '</td>');
+                $trTemp.append('<td>' + studentList[i].grade + '</td>');
+                $trTemp.append('<td>' + studentList[i].questionList.length + '</td>');
+                const username = "'" + studentList[i].username + "'";
+                $trTemp.append('<td><button onClick="goJump(' + username + ')" type="button" class="btn btn-default btn-sm">选择</button></td>');
+                $stutbody.append($trTemp);
             }
             $("body").mLoading("hide");
+        }
+
+        function createStuQuest(questList) {
+            $stutbody = $('#stuquestion');
+            $stutbody.empty();
+            for (let i = 0; i < studentList.length; i++) {
+                $trTemp = $('<li class="list-group-item"></li>');
+                $trTemp.append('<span>' + questList.questionList[i] + '</span>');
+                // $trTemp.append('<span>' + questList[i].title + '</span>');
+                $stutbody.append($trTemp);
+            }
         }
 
         function createPage() {
@@ -253,9 +240,9 @@
             $pagination.find('li').eq(page).addClass('active');
             var start = (page - 1) * 10;
             var end = page * 10
-            var questionListClone = [...questionList.slice(start, end)];
+            var studentListClone = [...studentList.slice(start, end)];
             $("body").mLoading("show");
-            createQuestList(questionListClone);
+            createQuestList(studentListClone);
         }
         // -----------------监听页码上一页下一页-start------------
         $('#pagination:first-child').click(() => {
@@ -274,94 +261,11 @@
         });
         // -----------------监听页码上一页下一页-end------------
 
-        function goJump(code) {
-            setCookie('code', code, 2 * 60 * 60 * 1000);
-            location.href = 'sqlwrite.html';
-        }
-
-        // ---------增删改所用dom --start---------
-        $questTitle = $('#questTitle');
-        $questSimMessage = $('#questSimMessage');
-        $questResult = $('#questReasult');
-        $questsql = $('#questsql');
-        $detmessage = $('#detMessage');
-        $updata = $('#updata');
-        $add = $('#add');
-        // ---------增删改所用dom --end---------
-
-        $('#addquest').on('click', () => {
-            $myModalTitle = $('#myModalTitle');
-            $myModalTitle.html('添加题目');
-            $updata.hide();
-            $add.show();
-        });
-
-        function updataquest(code) {
-            console.log('code:' + code);
-            selectCode = code;
-            $myModalTitle = $('#myModalTitle');
-            $myModalTitle.html('更新题目');
+        function goJump(username) {
+        	const studentListClone = studentList.filter(item => item.username == username)[0];
+        	// console.log(JSON.stringify(studentListClone));
+            createStuQuest(studentListClone);
             $('#myModal').modal('show');
-            $updata.show();
-            $add.hide();
-            const quest = questionList.filter((item) => {
-                return item.code == code;
-            })[0];
-            console.log(quest);
-            $questTitle.val(quest.title);
-            $questSimMessage.val(quest.simmessage);
-            $detmessage.val(quest.detmessage);
-            $questResult.val(quest.result);
-            $questsql.val(quest.title);
-        };
-
-        $updata.on('click', () => {
-            const params = {
-                'code': selectCode,
-                'title': $questTitle.val(),
-                'simmessage': $questSimMessage.val(),
-                'detmessage': $detmessage.val(),
-                'result': $questResult.val(),
-                'testsql': $questsql.val(),
-                'type': 'update'
-            }
-            request(params);
-        });
-
-        function remove(code) {
-            var a = $('.confirm').popConfirm();
-            if (removeStatus) {
-                return
-            }
-            removeStatus = false;
-            if (!a) {
-                return
-            }
-            console.log('true');
-            const params = {
-                'code': selectCode,
-                'title': '',
-                'simmessage': '',
-                'detmessage': '',
-                'result': '',
-                'testsql': '',
-                'type': 'delete'
-            }
-            request(params);
-        }
-
-        function addQuestion() {
-            const params = {
-                'code': '',
-                'title': $questTitle.val(),
-                'simmessage': $questSimMessage.val(),
-                'detmessage': $detmessage.val(),
-                'result': $questResult.val(),
-                'testsql': $questsql.val(),
-                'type': 'add'
-            }
-            console.log('params=' + JSON.stringify(params));
-            request(params);
         }
 
         function request(params) {

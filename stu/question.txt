@@ -239,3 +239,9 @@
 2018-04-18 21:25:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
 2018-04-18 21:25:32selectSql=SELECT * FROM `questionlist` where `code` = '10001'
 2018-04-18 21:25:32response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
+2018-04-20 16:12:52selectSql=SELECT * FROM `questionlist` where `code` = '1001'
+2018-04-20 16:12:52response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
+2018-04-20 16:46:34selectSql=SELECT * FROM `questionlist` where `code` = '1001'
+2018-04-20 16:46:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
+2018-04-20 16:54:39selectSql=SELECT * FROM `questionlist` where `code` = '1001'
+2018-04-20 16:54:39response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}

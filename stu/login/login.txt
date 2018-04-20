@@ -48,3 +48,7 @@
 2018-04-19 20:16:52response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-19 20:16:52"}
 2018-04-19 20:17:36selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
 2018-04-19 20:17:36response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-19 20:17:36"}
+2018-04-20 10:09:09selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-20 10:09:09response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-20 10:09:09"}
+2018-04-20 16:55:29selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-20 16:55:29response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-20 16:55:29"}
