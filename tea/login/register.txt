@@ -150,3 +150,27 @@
 2018-04-06 17:36:23response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:36:23"}
 2018-04-06 17:37:56selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
 2018-04-06 17:37:56response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-06 17:37:56"}
+2018-04-24 13:32:43selectSql=SELECT * FROM `teachermanage` where `username` = '123'
+2018-04-24 13:35:10selectSql=SELECT * FROM `teachermanage` where `username` = '123'
+2018-04-24 13:36:10selectSql=SELECT * FROM `teachermanage` where `username` = '123'
+2018-04-24 13:36:18selectSql=SELECT * FROM `teachermanage` where `username` = ''
+2018-04-24 13:38:33selectSql=SELECT * FROM `teachermanage` where `username` = ''
+2018-04-24 13:38:33insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('','d41d8cd98f00b204e9800998ecf8427e')
+2018-04-24 13:38:33response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-24 13:38:33"}
+2018-04-24 13:38:48selectSql=SELECT * FROM `teachermanage` where `username` = '111'
+2018-04-24 13:38:48insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('111','698d51a19d8a121ce581499d7b701668')
+2018-04-24 13:38:48response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-24 13:38:48"}
+2018-04-24 13:40:15selectSql=SELECT * FROM `teachermanage` where `username` = '111'
+2018-04-24 13:40:15response={"status":-1,"msg":"sorry,\u8be5\u7528\u6237\u540d\u5df2\u6ce8\u518c\uff0c\u8bf7\u91cd\u8bd5","time":"2018-04-24 13:40:15"}
+2018-04-25 10:29:50selectSql=SELECT * FROM `teachermanage` where `username` = '1234'
+2018-04-25 10:29:50insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('1234','81dc9bdb52d04dc20036dbd8313ed055')
+2018-04-25 10:29:50response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-25 10:29:50"}
+2018-04-25 10:35:39selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-25 10:35:39insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
+2018-04-25 10:35:39response={"status":-1,"msg":"sorry,\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5","time":"2018-04-25 10:35:39"}
+2018-04-25 10:35:54selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-25 10:35:54insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
+2018-04-25 10:35:54response={"status":-1,"msg":"sorry,\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5","time":"2018-04-25 10:35:54"}
+2018-04-25 10:37:33selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-25 10:37:33insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
+2018-04-25 10:37:33response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-25 10:37:33"}

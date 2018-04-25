@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="common/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="common/css/dashboard.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="common/css/jquery.mloading.css">
+    <style>
+        #question p:nth-child(2n) {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sqlinput {
+            resize: none;
+            width: 100%;
+            height: 200px;
+        }
+        .sqlbutton{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#">sql语言在线编译系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div id="question">
+                    <h2></h2>
+                    <p>简要介绍</p>
+                    <p></p>
+                    <p>详细介绍</p>
+                    <p></p>
+                    <p>结果</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">sql语言在线编译</h1>
+                <div class="table-responsive">
+                   <div>
+                       <div class="alert alert-success alert-dismissible" role="alert" id="prompt" style="display: none">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                           <span><strong>Warning!</strong> Better check yourself, you're not looking too good.</span>
+                        </div>
+                   </div>
+                    <div>
+                        <textarea rows="5" clos="20" class="sqlinput" id="sqlval"></textarea>
+                        <button type="button" id="myButton" data-loading-text="编译中..." class="btn btn-primary sqlbutton" autocomplete="off">
+                          执行
+                        </button>
+                    </div>
+                </div>
+                <table class="table table-striped">
+                    <thead id="resultheader">
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="common/js/jquery.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/jquery.mloading.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="common/js/holder.min.js"></script>
+    <script>
+        // -------------全局变量start----------------
+        var code = '';
+        var question = {};
+        // -------------全局变量end----------------
+
+        if (!sessionStorage.getItem("stuUsername")) {
+            location.href = "/sqlcount/stu/login/login.html";
+        }
+        window.onload = function() {
+            $("body").mLoading("show");
+            code = getCookie('code');
+            console.log('code:' + code);
+            const params = {
+                code: code
+            }
+            $.ajax({
+                type: "POST",
+                url: `question.php`,
+                data: params,
+                dataType: "json",
+                success: function(res) {
+                    $("body").mLoading("hide");
+                    console.log('getQusetion:' + JSON.stringify(res));
+                    if (res.status == -1) {
+                        return;
+                    }
+                    Object.assign(question, res.question); // 初始化数据
+                    initDom();
+                    $("body").mLoading("hide");
+                },
+                error: function(res) {
+                    $("body").mLoading("hide");
+                    $("#errorResult").html("网络不通畅");
+                    $('#myModal').modal('show');
+                    console.log('失败');
+                }
+            });
+        };
+        
+        function initDom() {
+            $question = $('#question');
+            $question.find('h2').html(question.title);
+            $question.find('p').eq(1).html(question.simmessage);
+            $question.find('p').eq(3).html(question.detmessage);
+            $question.find('p').eq(5).html(question.result);
+        }
+
+        function getCookie(c_name) {
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(c_name + "="); //获取字符串的起点  
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1; //获取值的起点  
+                    c_end = document.cookie.indexOf(";", c_start); //获取结尾处  
+                    if (c_end == -1) c_end = document.cookie.length; //如果是最后一个，结尾就是cookie字符串的结尾  
+                    return decodeURI(document.cookie.substring(c_start, c_end)); //截取字符串返回  
+                }
+            }
+            return "";
+        }
+        function testsql() {
+            var sql = $('#sqlval').val();
+            console.log('val::' + sql);
+//            const result = resolveSql(sql);
+            const params = {
+                sql : sql
+            }
+            console.log(JSON.stringify(params));       
+            $.ajax({
+                type: 'POST',
+                url: `testsql.php`,
+                data: params,
+                success: function(res) {
+                    const data = JSON.parse(res);
+                    $prompt = $('#prompt');
+                   $prompt.show();
+                    if (data.status == 1) {
+                        $prompt.removeClass().addClass('alert alert-success alert-dismissible');
+                        $prompt.find('span').remove();
+                        $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
+                        createResultTable(data.data);
+                    } else {
+                        $prompt.find('span').remove();
+                        $prompt.removeClass().addClass('alert alert-danger alert-dismissible');
+                        $prompt.append('<span><strong>Error!</strong>  ' + data.msg + '</span>');
+                    }
+                    console.log('success:' + JSON.stringify(data));
+                },
+                error: function(res) {
+                    console.log('error:' + JSON.stringify(res));
+                }
+            })
+        }
+        
+        function createResultTable(data) {
+            $resultheader = $('#resultheader');
+            $resultTbody = $('#resultTbody');
+            $resultheader.empty();
+            $resultTbody.empty();
+            $HtrTemp = $('<tr></tr>');
+            if (data.field.length > 0) {
+                for(let i= 0; i < data.field.length; i++) {
+                    let status = true;
+                    if (data.content.length > 0) {
+                        status = data.content[0][data.field[i]];
+                    }
+                    if(status) {
+                        $HtrTemp.append('<th>' + data.field[i] + '</th>');
+                    }
+                }
+                $resultheader.append($HtrTemp);
+            }
+            if (data.content.length > 0) {
+                for(let j = 0; j < data.content.length; j++) {
+                    $BtrTemp = $('<tr></tr>')
+                    for(let i= 0; i < data.field.length; i++) {
+                        let key = data.field[i];
+//                        console.log('key' + key);
+//                        console.log('value:' + JSON.stringify(data.content[j][key]));
+                        if (data.content[j][key]) {
+                            $BtrTemp.append('<td>' + data.content[j][key] + '</td>');
+                        }
+                    }
+                    $resultTbody.append($BtrTemp);
+                }
+            }
+        }
+
+        function resolveSql(sql) {
+            var table = ''
+            var type = 'select'
+            var sqlList = sql.split(' '); // 分割字符串
+            type = sqlList[0].toLocaleLowerCase() == 'select' ? 'select' : 'unSelect';
+            var beforeTablename = ['table', 'on', 'from', 'into', 'update'];
+            sqlList = sqlList.filter((item) => { // 去除空项
+                return item.length > 0;
+            });
+//            console.log('sqlList' + sqlList);
+            for (let i = 0; i < sqlList.length ; i++) {
+                if(beforeTablename.some(item =>  item == sqlList[i].toLocaleLowerCase())) {
+                    console.log('success' + sqlList[i + 1]);
+                    table = sqlList[i + 1].match(/`(.*)`/)[1];
+                    break;
+                }
+            };
+            return {
+                table,
+                type
+            }
+        }
+        
+        // 监听事件： 代码编译按钮
+        $('#myButton').on('click', function() {
+            var $btn = $(this).button('loading')
+            // business logic...
+            testsql();
+            setTimeout(() => {
+                $btn.button('reset');
+            },2000);
+        });
+    </script>
+</body>
+
+</html>

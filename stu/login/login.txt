@@ -56,3 +56,18 @@
 2018-04-23 11:30:42response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-23 11:30:42"}
 2018-04-23 11:31:03selectSql=SELECT * FROM `studentmanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
 2018-04-23 11:31:03response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-23 11:31:03"}
+2018-04-24 11:31:36selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:36:18selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:37:09selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:37:57selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:37:57response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:37:57"}
+2018-04-24 11:47:00selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:47:00response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:47:00"}
+2018-04-24 11:49:20selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:49:20response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:49:20"}
+2018-04-24 11:50:35selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:50:35response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:50:35"}
+2018-04-24 11:51:02selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:51:02response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:51:02"}
+2018-04-24 11:51:39selectSql=SELECT * FROM `studentmanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-24 11:51:39response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-24 11:51:39"}
