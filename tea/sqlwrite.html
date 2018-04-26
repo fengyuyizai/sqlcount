@@ -29,6 +29,7 @@
             height: 200px;
         }
         .sqlbutton{
+            margin-left: 10px;
             float: right;
         }
     </style>
@@ -85,6 +86,9 @@
                    </div>
                     <div>
                         <textarea rows="5" clos="20" class="sqlinput" id="sqlval"></textarea>
+                        <button type="button" id="submit" class="btn btn-primary sqlbutton">
+                          提交
+                        </button>
                         <button type="button" id="myButton" data-loading-text="编译中..." class="btn btn-primary sqlbutton" autocomplete="off">
                           执行
                         </button>
@@ -102,6 +106,24 @@
         </div>
     </div>
 
+   <!-- Modal -->
+    <div class="modal fade" id="submitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">提示</h4>
+          </div>
+          <div class="modal-body" id="errorResult">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+<!--            <button type="button" class="btn btn-primary">Save changes</button>-->
+          </div>
+        </div>
+      </div>
+    </div>
+   
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -114,10 +136,11 @@
         // -------------全局变量start----------------
         var code = '';
         var question = {};
+        var sqlResult = {};
         // -------------全局变量end----------------
 
-        if (!sessionStorage.getItem("stuUsername")) {
-            location.href = "/sqlcount/stu/login/login.html";
+        if (!sessionStorage.getItem("teaUsername")) {
+            location.href = "/sqlcount/tea/login/login.html";
         }
         window.onload = function() {
             $("body").mLoading("show");
@@ -185,11 +208,12 @@
                 success: function(res) {
                     const data = JSON.parse(res);
                     $prompt = $('#prompt');
-                   $prompt.show();
+                    $prompt.show();
                     if (data.status == 1) {
                         $prompt.removeClass().addClass('alert alert-success alert-dismissible');
                         $prompt.find('span').remove();
                         $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
+                        sqlResult = data.data;
                         createResultTable(data.data);
                     } else {
                         $prompt.find('span').remove();
@@ -269,6 +293,28 @@
             setTimeout(() => {
                 $btn.button('reset');
             },2000);
+        });
+        $('#submit').on('click', function() {
+            const params = {
+                code: code,
+                field: sqlResult.field,
+                content: sqlResult.content
+            }
+            $.ajax({
+                type: "POST",
+                url: `saveResult.php`,
+                data: params,
+                success: function(res) {
+                    $("#submitResult").modal('show');
+                    $('#errorResult').html('提交成功');
+                    console.log(JSON.stringify(res));
+                },
+                error: function(res) {
+                    $("#submitResult").modal('show');
+                    $('#errorResult').html('提交失败');
+                    console.log(JSON.stringify(res));
+                }
+            });
         });
     </script>
 </body>
