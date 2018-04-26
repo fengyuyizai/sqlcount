@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="common/css/dashboard.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="common/css/jquery.mloading.css">
+    <link type="text/css" rel="stylesheet" href="common/css/am-pagination.css">
 </head>
 
 <body>
@@ -69,7 +70,7 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">sql语言在线编译</h1>
+                <h1 class="page-header">请选择题目</h1>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -85,10 +86,11 @@
                         </tbody>
                     </table>
                 </div>
-                <nav aria-label="Page navigation">
+                <!-- <nav aria-label="Page navigation">
                     <ul class="pagination" id="pagination">
                     </ul>
-                </nav>
+                </nav> -->
+                <div id="ampager"></div>
             </div>
         </div>
     </div>
@@ -101,11 +103,28 @@
     <script src="common/js/jquery.mloading.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="common/js/holder.min.js"></script>
+    <script type="text/javascript" src="common/js/am-pagination.js"></script>
     <script>
         // -------------全局变量start----------------
         var page = 1;
         var maxPage = 1;
         var questionList = [];
+
+        var pagerOpts={
+             maxSize: 10, 
+             totals: maxPage, //Total number of items in all pages.
+             page: page,
+             pageSize: 10, //Maximum number of items per page. A value less than one indicates all items on one page.  default :10
+             lastText: '»»', //Text for Last button.    default: '»»'
+             firstText: '««', //Text for First button. default: '««'
+             prevText: '«',//« //Text for Previous  button.  default:'«'
+             nextText: '»', //Text for next button.   default:'»'
+             rotate: true,//Whether to keep current page in the middle of  the visible ones   default:true
+             directionLinks: true,// Whether to display Previous / Next buttons.  default:true
+             boundaryLinks: true,// Whether to display first / last buttons.      default:true
+             theme:'', // 'bootstrap' or 'amazeui'   defalut:''   default ui  only modify background color from bootstrap pagination
+             btnSize:'' // 'sm'  or 'lg'  defalut : ''
+        };
         // -------------全局变量end----------------
 
         if (!sessionStorage.getItem("stuUsername")) {
@@ -145,21 +164,30 @@
             $("body").mLoading("hide");
         }
 
-        function createPage() {
-            $pagination = $('#pagination');
-            $pagination.find('li').empty();
-            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
-            for (let i = 0; i < maxPage; i++) {
-                $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1) + '</a></li>');
-                $pagination.append($liTemp);
-            }
-            $pagination.find('li').eq(page).addClass('active');
-            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        function createPage() { // 第三方分页
+            $('#ampager')
+                .pagination(pagerOpts)
+                .onChangePage(function(e){
+                    choosePage(e.page);
+                    console.info('pager bind envent :selected page:'+e.page+'  current pageSize:'+e.pageSize+'  number of items'+e.totals);
+            });
         }
+
+        // function createPage() {
+        //     $pagination = $('#pagination');
+        //     $pagination.find('li').empty();
+        //     $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
+        //     for (let i = 0; i < maxPage; i++) {
+        //         $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1) + '</a></li>');
+        //         $pagination.append($liTemp);
+        //     }
+        //     $pagination.find('li').eq(page).addClass('active');
+        //     $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        // }
 
         function choosePage(selectPage) {
             page = selectPage;
-            $pagination.find('li').eq(page).addClass('active');
+            // $pagination.find('li').eq(page).addClass('active');
             var start = (page - 1) * 10;
             var end = page * 10
             var questionListClone = [...questionList.slice(start, end)];
@@ -167,20 +195,20 @@
             createQuestList(questionListClone);
         }
         // -----------------监听页码上一页下一页-start------------
-        $('#pagination:first-child').click(() => {
-            page--;
-            if (page <= 1) {
-                page = 1;
-            }
-            choosePage(page);
-        });
-        $('#pagination:last-child').click(() => {
-            page++;
-            if (page >= maxPage) {
-                page = maxPage;
-            }
-            choosePage(page);
-        });
+        // $('#pagination:first-child').click(() => {
+        //     page--;
+        //     if (page <= 1) {
+        //         page = 1;
+        //     }
+        //     choosePage(page);
+        // });
+        // $('#pagination:last-child').click(() => {
+        //     page++;
+        //     if (page >= maxPage) {
+        //         page = maxPage;
+        //     }
+        //     choosePage(page);
+        // });
         // -----------------监听页码上一页下一页-end------------
         
         function goJump(code) {

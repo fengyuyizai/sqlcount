@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="common/css/dashboard.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="common/css/jquery.mloading.css">
+    <link type="text/css" rel="stylesheet" href="common/css/am-pagination.css">
     <!-- <link type="text/css" rel="stylesheet" href="common/css/popconfirm.css"> -->
 </head>
 <style type="text/css">
@@ -46,7 +47,12 @@
         vertical-align: middle;
         display: inline-block;
     }
-
+    .select-default{
+        width: 100%;
+        height: 40px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
 </style>
 
 <body>
@@ -104,10 +110,11 @@
                         </tbody>
                     </table>
                 </div>
-                <nav aria-label="Page navigation">
+<!--                 <nav aria-label="Page navigation">
                     <ul class="pagination" id="pagination">
                     </ul>
-                </nav>
+                </nav> -->
+                <div id="ampager"></div>
             </div>
         </div>
     </div>
@@ -131,12 +138,18 @@
                         <input type="text" class="form-control" id="questSimMessage" aria-describedby="basic-addon3">
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">结果案例</span>
-                        <input type="text" class="form-control" id="questReasult" aria-describedby="basic-addon3">
+                        <span class="input-group-addon">选择难度</span>
+                        <select class="select-default" >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon">校验结果sql</span>
-                        <textarea rows="5" clos="20" class="sqlinput" id="questsql"></textarea>
+                        <span class="input-group-addon" id="basic-addon3">结果案例</span>
+                        <textarea rows="5" clos="20" class="sqlinput" id="questReasult"></textarea>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">详细介绍</span>
@@ -178,13 +191,30 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="common/js/holder.min.js"></script>
     <script src="common/js/jquery.popconfirm.js"></script>
+    <script type="text/javascript" src="common/js/am-pagination.js"></script>
     <script>
         // -------------全局变量start----------------
         var page = 1;
-        var maxPage = 1;
+        var maxPage = 10;
         var questionList = [];
         var selectCode = 0;
         var removeStatus = true;
+
+        var pagerOpts={
+             maxSize: 10, 
+             totals: maxPage, //Total number of items in all pages.
+             page: page,
+             pageSize: 10, //Maximum number of items per page. A value less than one indicates all items on one page.  default :10
+             lastText: '»»', //Text for Last button.    default: '»»'
+             firstText: '««', //Text for First button. default: '««'
+             prevText: '«',//« //Text for Previous  button.  default:'«'
+             nextText: '»', //Text for next button.   default:'»'
+             rotate: true,//Whether to keep current page in the middle of  the visible ones   default:true
+             directionLinks: true,// Whether to display Previous / Next buttons.  default:true
+             boundaryLinks: true,// Whether to display first / last buttons.      default:true
+             theme:'', // 'bootstrap' or 'amazeui'   defalut:''   default ui  only modify background color from bootstrap pagination
+             btnSize:'' // 'sm'  or 'lg'  defalut : ''
+        };    
         // -------------全局变量end----------------
 
         $('#navTitle li').on('click', () => {
@@ -236,21 +266,30 @@
             $("body").mLoading("hide");
         }
 
-        function createPage() {
-            $pagination = $('#pagination');
-            $pagination.find('li').empty();
-            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
-            for (let i = 0; i < maxPage; i++) {
-                $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1) + '</a></li>');
-                $pagination.append($liTemp);
-            }
-            $pagination.find('li').eq(page).addClass('active');
-            $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        function createPage() { // 第三方分页
+            $('#ampager')
+                .pagination(pagerOpts)
+                .onChangePage(function(e){
+                    choosePage(e.page);
+                    console.info('pager bind envent :selected page:'+e.page+'  current pageSize:'+e.pageSize+'  number of items'+e.totals);
+            });
         }
+
+        // function createPage() {  // 旧版本分页
+        //     $pagination = $('#pagination');
+        //     $pagination.find('li').empty();
+        //     $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>');
+        //     for (let i = 0; i < maxPage; i++) {
+        //         $liTemp = $('<li onClick="choosePage(' + (i + 1) + ')"><a href="#">' + (i + 1) + '</a></li>');
+        //         $pagination.append($liTemp);
+        //     }
+        //     $pagination.find('li').eq(page).addClass('active');
+        //     $pagination.append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a> </li>');
+        // }
 
         function choosePage(selectPage) {
             page = selectPage;
-            $pagination.find('li').eq(page).addClass('active');
+            // $pagination.find('li').eq(page).addClass('active');
             var start = (page - 1) * 10;
             var end = page * 10
             var questionListClone = [...questionList.slice(start, end)];
@@ -258,20 +297,20 @@
             createQuestList(questionListClone);
         }
         // -----------------监听页码上一页下一页-start------------
-        $('#pagination:first-child').click(() => {
-            page--;
-            if (page <= 1) {
-                page = 1;
-            }
-            choosePage(page);
-        });
-        $('#pagination:last-child').click(() => {
-            page++;
-            if (page >= maxPage) {
-                page = maxPage;
-            }
-            choosePage(page);
-        });
+        // $('#pagination:first-child').click(() => {
+        //     page--;
+        //     if (page <= 1) {
+        //         page = 1;
+        //     }
+        //     choosePage(page);
+        // });
+        // $('#pagination:last-child').click(() => {
+        //     page++;
+        //     if (page >= maxPage) {
+        //         page = maxPage;
+        //     }
+        //     choosePage(page);
+        // });
         // -----------------监听页码上一页下一页-end------------
 
         function goJump(code) {

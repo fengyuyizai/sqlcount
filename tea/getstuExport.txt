@@ -97,3 +97,11 @@
 2018-04-26 18:04:08response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:04:08"}
 2018-04-26 18:04:34selectSql=SELECT * FROM `stumessage`
 2018-04-26 18:04:34response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:04:34"}
+2018-04-26 18:16:27selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:16:27response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:16:27"}
+2018-04-26 18:29:29selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:29:29response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:29:29"}
+2018-04-26 18:31:47selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:31:47response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:31:47"}
+2018-04-26 18:32:22selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:32:22response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:32:22"}
