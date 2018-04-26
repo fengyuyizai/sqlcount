@@ -32,3 +32,27 @@
 2018-04-19 18:33:19response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 18:33:19"}
 2018-04-19 18:33:25selectSql=DELETE * FROM `questionlist` WHERE code='0'
 2018-04-19 18:33:25response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-19 18:33:25"}
+2018-04-26 21:00:54selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:00:54response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:00:54"}
+2018-04-26 21:01:12selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:01:12response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:01:12"}
+2018-04-26 21:03:13selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:03:13response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:03:13"}
+2018-04-26 21:03:43selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:03:43response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:03:43"}
+2018-04-26 21:03:45selectSql=
+2018-04-26 21:03:45response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-04-26 21:03:45"}
+2018-04-26 21:06:01selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:06:01response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:06:01"}
+2018-04-26 21:06:18selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='' WHERE code = '10001'
+2018-04-26 21:06:18response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:06:18"}
+2018-04-26 21:24:27selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='3' WHERE code = '10001'
+2018-04-26 21:24:27response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:24:27"}
+2018-04-26 21:24:37selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='3' WHERE code = '10001'
+2018-04-26 21:24:37response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:24:37"}
+2018-04-26 21:24:55selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='2' WHERE code = '10001'
+2018-04-26 21:24:55response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:24:55"}
+2018-04-26 21:30:18selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='4' WHERE code = '10001'
+2018-04-26 21:30:18response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:30:18"}
+2018-04-26 21:30:26selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='2' WHERE code = '10001'
+2018-04-26 21:30:26response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:30:26"}

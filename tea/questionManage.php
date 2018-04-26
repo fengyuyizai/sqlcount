@@ -7,16 +7,17 @@
     $simmessage = $_POST['simmessage'];
     $detmessage = $_POST['detmessage'];
     $result = $_POST['result'];
-    $testsql = $_POST['testsql'];
+    $diffculty = $_POST['diffculty'];
     $type = $_POST['type'];
     if ($type == 'add') {
-        $selectSql = "INSERt INTO `questionlist` (title, simmessage, detmessage, result, testsql) VALUES ('$title', '$simmessage', '$detmessage', '$result', '$testsql')";
+        $selectSql = "INSERt INTO `questionlist` (title, simmessage, detmessage, result, diffculty) VALUES ('$title', '$simmessage', '$detmessage', '$result', '$diffculty')";
         echo $selectSql;
     } else if ($type == 'update') {
-        $selectSql = "UPDATE `questionlist` SET title='$title', simmessage='$simmessage', detmessage='$detmessage', result='$result', testsql='$testsql' WHERE code = '$code'";
+        $selectSql = "UPDATE `questionlist` SET title='$title', simmessage='$simmessage', detmessage='$detmessage', result='$result', diffculty='$diffculty' WHERE code = '$code'";
     } else if ($type == 'delete') {
         $selectSql = "DELETE FROM `questionlist` WHERE code='$code'";
     }
+//    print_r($selectSql);
     file_put_contents('questionmanage.txt',date('Y-m-d H:i:s',time())."selectSql=".$selectSql."\r\n",FILE_APPEND );
     $selectResult = $mysqli->query($selectSql);
 

@@ -202,7 +202,11 @@
                 studentList = [...res.studentList]; // 初始化数据
                 console.log(studentList);
                 studentList.forEach((item) => {
-                	item.questionList = [...JSON.parse(item.questionList)];
+                    if(item.questionList != ''){
+                        item.questionList = [...JSON.parse(item.questionList)];
+                    } else {
+                        item.questionList = [];
+                    }
                 });
                 maxPage = parseInt(studentList.length / 10) + 1; // 初始化页数
                 var studentListClone = [];
@@ -234,7 +238,7 @@
         function createStuQuest(questList) {
             $stutbody = $('#stuquestion');
             $stutbody.empty();
-            for (let i = 0; i < studentList.length; i++) {
+            for (let i = 0; i < questList.questionList.length; i++) {
                 $trTemp = $('<li class="list-group-item"></li>');
                 $trTemp.append('<span>' + questList.questionList[i] + '</span>');
                 // $trTemp.append('<span>' + questList[i].title + '</span>');

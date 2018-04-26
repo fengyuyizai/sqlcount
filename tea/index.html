@@ -47,7 +47,7 @@
         vertical-align: middle;
         display: inline-block;
     }
-    .select-default{
+    .select-diffculty{
         width: 100%;
         height: 40px;
         border-bottom-right-radius: 5px;
@@ -139,7 +139,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">选择难度</span>
-                        <select class="select-default" >
+                        <select class="select-diffculty" id="questDiffculty">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -226,6 +226,10 @@
             location.href = "/sqlcount/tea/login/login.html";
         }
         window.onload = function() {
+            initData();
+        };
+
+        function initData() {
             $("body").mLoading("show");
             $.getJSON(`getQuestionsList.php`, (res) => {
                 //                console.log('getQusetionList:' + JSON.stringify(res));
@@ -242,8 +246,7 @@
                 createQuestList(questionListClone);
                 createPage();
             });
-        };
-
+        }
         function createQuestList(questList) {
             $questTbody = $('#questTbody');
             $questTbody.find('tr').empty();
@@ -322,8 +325,8 @@
         $questTitle = $('#questTitle');
         $questSimMessage = $('#questSimMessage');
         $questResult = $('#questReasult');
-        $questsql = $('#questsql');
         $detmessage = $('#detMessage');
+        $diffculty = $('#questDiffculty');
         $updata = $('#updata');
         $add = $('#add');
         // ---------增删改所用dom --end---------
@@ -351,7 +354,8 @@
             $questSimMessage.val(quest.simmessage);
             $detmessage.val(quest.detmessage);
             $questResult.val(quest.result);
-            $questsql.val(quest.title);
+            $diffculty.val(quest.diffculty); // 
+//            console.log('$diffculty' + $diffculty.val());
         };
 
         $updata.on('click', () => {
@@ -361,9 +365,10 @@
                 'simmessage': $questSimMessage.val(),
                 'detmessage': $detmessage.val(),
                 'result': $questResult.val(),
-                'testsql': $questsql.val(),
+                'diffculty': $diffculty.val(),
                 'type': 'update'
             }
+            console.log('update' + JSON.stringify(params));
             request(params);
         });
 
@@ -383,7 +388,7 @@
                 'simmessage': '',
                 'detmessage': '',
                 'result': '',
-                'testsql': '',
+                'diffculty': '',
                 'type': 'delete'
             }
             request(params);
@@ -396,7 +401,7 @@
                 'simmessage': $questSimMessage.val(),
                 'detmessage': $detmessage.val(),
                 'result': $questResult.val(),
-                'testsql': $questsql.val(),
+                'diffculty': $diffculty.val(),
                 'type': 'add'
             }
             console.log('params=' + JSON.stringify(params));
@@ -413,7 +418,7 @@
                 success: function(res) {
                     $('#myModal').modal('hide');
                     $("body").mLoading("hide");
-                    choosePage(page);
+                    initData();
                     console.log('success' + JSON.stringify(res));
                 },
                 error: function(res) {

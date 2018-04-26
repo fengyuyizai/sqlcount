@@ -112,6 +112,8 @@ date_default_timezone_set('Asia/Shanghai');
     							} else {
     								$questionlist = array();
     							}
+                                var_dump($postCode);
+                                var_dump($questionlist);
 								if(!in_array($postCode, $questionlist)){
 									array_push($questionlist,$postCode);
 									// var_dump($questionlist);
