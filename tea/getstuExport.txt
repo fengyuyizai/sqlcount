@@ -93,3 +93,7 @@
 2018-04-20 16:29:25response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"1001,1002,1003"},{"username":"root2","name":"\u674e\u56db","grade":"\u5927\u4e09","questionList":"1001,1002,1003"},{"username":"root3","name":"\u738b\u4e94","grade":"\u5927\u4e09","questionList":"1001,1002,1003"}],"time":"2018-04-20 16:29:25"}
 2018-04-20 16:29:54selectSql=SELECT * FROM `stumessage`
 2018-04-20 16:29:54response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"1001,1002,1003"},{"username":"root2","name":"\u674e\u56db","grade":"\u5927\u4e09","questionList":"1001,1002,1003"},{"username":"root3","name":"\u738b\u4e94","grade":"\u5927\u4e09","questionList":"1001,1002,1003"}],"time":"2018-04-20 16:29:54"}
+2018-04-26 18:04:08selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:04:08response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:04:08"}
+2018-04-26 18:04:34selectSql=SELECT * FROM `stumessage`
+2018-04-26 18:04:34response={"status":1,"msg":"\u67e5\u8be2\u6210\u529f","studentList":[{"username":"root","name":"\u5f20\u4e09","grade":"\u5927\u56db","questionList":"[\"10001\"]"}],"time":"2018-04-26 18:04:34"}

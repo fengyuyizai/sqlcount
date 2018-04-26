@@ -10,16 +10,19 @@
     	if($_POST){
     		$content = '';
             if (!empty($_POST['content'])) {
-        		$content = addslashes(json_encode($_POST['content']));
+                // $content = addslashes(json_encode($_POST['content']));
+        		$content = json_encode($_POST['content'],true);
             }
-    		$field = json_encode($_POST['field'],JSON_FORCE_OBJECT);
+            // $field = json_encode($_POST['field'],JSON_FORCE_OBJECT);
+    		$field = json_encode($_POST['field'],true);
     		$code = $_POST['code'];
     		$sql = "select * from `questionlist` where `code`=$code limit 1";
     		//print_r($sql);
     		$result = $connResult->query($sql);
     		//var_dump($result);
     		if(!empty($result)){
-				$sql = "update `questionlist` set `content`='".$content."',`fields`='".$field."' where code=".$code;
+				$sql = "update `questionlist` set `content`='".$content."',`field`='".$field."' where code=".$code;
+                print_r($sql);
 				$updateResult = $connResult->query($sql);
 
 				$updateRes = $connResult->affected_rows;

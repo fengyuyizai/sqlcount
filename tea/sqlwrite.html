@@ -105,8 +105,8 @@
             </div>
         </div>
     </div>
-
-   <!-- Modal -->
+    
+     <!-- Modal -->
     <div class="modal fade" id="submitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-   
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -142,6 +142,7 @@
         if (!sessionStorage.getItem("teaUsername")) {
             location.href = "/sqlcount/tea/login/login.html";
         }
+
         window.onload = function() {
             $("body").mLoading("show");
             code = getCookie('code');
@@ -208,7 +209,7 @@
                 success: function(res) {
                     const data = JSON.parse(res);
                     $prompt = $('#prompt');
-                    $prompt.show();
+                   $prompt.show();
                     if (data.status == 1) {
                         $prompt.removeClass().addClass('alert alert-success alert-dismissible');
                         $prompt.find('span').remove();
@@ -294,12 +295,14 @@
                 $btn.button('reset');
             },2000);
         });
+        
         $('#submit').on('click', function() {
             const params = {
                 code: code,
                 field: sqlResult.field,
                 content: sqlResult.content
             }
+            console.log(JSON.stringify(params));
             $.ajax({
                 type: "POST",
                 url: `saveResult.php`,

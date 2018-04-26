@@ -105,7 +105,8 @@
             </div>
         </div>
     </div>
-    
+
+
      <!-- Modal -->
     <div class="modal fade" id="submitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -136,6 +137,7 @@
         // -------------全局变量start----------------
         var code = '';
         var question = {};
+        var sqlResult = {};
         // -------------全局变量end----------------
 
         if (!sessionStorage.getItem("stuUsername")) {
@@ -212,6 +214,7 @@
                         $prompt.removeClass().addClass('alert alert-success alert-dismissible');
                         $prompt.find('span').remove();
                         $prompt.append('<span><strong>Success!</strong>  ' + data.msg + '</span>');
+                        sqlResult = data.data;
                         createResultTable(data.data);
                     } else {
                         $prompt.find('span').remove();
@@ -292,20 +295,26 @@
                 $btn.button('reset');
             },2000);
         });
-        
+
         $('#submit').on('click', function() {
             const params = {
+                username: sessionStorage.getItem('stuUsername'),
                 code: code,
                 field: sqlResult.field,
                 content: sqlResult.content
             }
+            // console.log(JSON.stringify(params));
             $.ajax({
                 type: "POST",
                 url: `testResult.php`,
                 data: params,
                 success: function(res) {
+                    if (res.status == 1) {
+                        $('#errorResult').html('提交成功');
+                    } else {
+                        $('#errorResult').html('答案不正确，再试试');
+                    }
                     $("#submitResult").modal('show');
-                    $('#errorResult').html('提交成功');
                     console.log(JSON.stringify(res));
                 },
                 error: function(res) {

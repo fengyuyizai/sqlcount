@@ -181,9 +181,9 @@
                     return;
                 }
                 studentList = [...res.studentList]; // 初始化数据
-                // console.log(studentList);
+                console.log(studentList);
                 studentList.forEach((item) => {
-                	item.questionList = item.questionList.split(',')
+                	item.questionList = [...JSON.parse(item.questionList)];
                 });
                 maxPage = parseInt(studentList.length / 10) + 1; // 初始化页数
                 var studentListClone = [];

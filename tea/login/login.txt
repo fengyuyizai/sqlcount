@@ -34,3 +34,9 @@
 2018-04-25 10:35:25selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
 2018-04-25 10:36:51selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
 2018-04-25 10:36:51response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-25 10:36:51"}
+2018-04-26 11:44:11selectSql=SELECT * FROM `teachermanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-26 11:44:11response={"status":-1,"msg":"\u8d26\u6237\u4e0d\u5b58\u5728\u6216\u5bc6\u7801\u9519\u8bef","time":"2018-04-26 11:44:11"}
+2018-04-26 11:48:23selectSql=SELECT * FROM `teachermanage` where `username` = '1111' AND `password` = 'b59c67bf196a4758191e42f76670ceba'
+2018-04-26 11:48:23response={"status":1,"msg":"\u767b\u5f55\u6210\u529f","time":"2018-04-26 11:48:23"}
+2018-04-26 17:22:23selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'
+2018-04-26 17:22:31selectSql=SELECT * FROM `teachermanage` where `username` = 'root' AND `password` = '202cb962ac59075b964b07152d234b70'

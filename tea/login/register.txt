@@ -174,3 +174,9 @@
 2018-04-25 10:37:33selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
 2018-04-25 10:37:33insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
 2018-04-25 10:37:33response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-25 10:37:33"}
+2018-04-26 11:44:19selectSql=SELECT * FROM `teachermanage` where `username` = '1111'
+2018-04-26 11:44:19insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('1111','b59c67bf196a4758191e42f76670ceba')
+2018-04-26 11:44:19response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-26 11:44:19"}
+2018-04-26 17:23:44selectSql=SELECT * FROM `teachermanage` where `username` = 'root'
+2018-04-26 17:23:44insertSql=INSERT INTO `teachermanage` (`username`, `password`) VALUES ('root','202cb962ac59075b964b07152d234b70')
+2018-04-26 17:23:44response={"status":1,"msg":"\u606d\u559c\u60a8\uff0c\u6ce8\u518c\u6210\u529f","time":"2018-04-26 17:23:44"}
