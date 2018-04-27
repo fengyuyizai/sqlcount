@@ -86,6 +86,8 @@
                    </div>
                     <div>
                         <textarea rows="5" clos="20" class="sqlinput" id="sqlval"></textarea>
+                        <select id="tableName">
+                        </select>
                         <button type="button" id="submit" class="btn btn-primary sqlbutton">
                           提交
                         </button>
@@ -319,6 +321,57 @@
                 }
             });
         });
+        
+        
+        $selectTable = $('#tableName');
+
+
+        function initTableData() {
+            $.ajax({
+                type: 'GET',
+                url: `getAllTable.php`,
+                success: (res) => {
+                    res = JSON.parse(res);
+                    if (res.status == 1) {
+                        const tableList = [...res.tableList];
+                        creatTableList(tableList);
+                    }
+                    console.log('initTableName.success:' + JSON.stringify(res))
+                },
+                error: function(error) {
+                    console.log('initTableName.error:' + JSON.stringify(error));
+                }
+            })
+        }
+
+        function creatTableList(tableList) {
+            console.log('---- ' + tableList);
+            $selectTable.empty();
+            for (let i = 0; i < tableList.length; i++) {
+                $selectTable.append('<option value="' + tableList[i] + '">' + tableList[i] + '</option>');
+            }
+        }
+        $selectTable.on('change', function() {
+            console.log(typeof $(this).val());
+            const tableName = $(this).val();
+            const params = {
+                tableName: tableName
+            }
+            console.log(JSON.stringify(params))
+            $.  ajax({
+                type: 'POST',
+                data: params,
+                url: `getAllTable.php`,
+                success: function(res) {
+                    console.log('selcetChange' + typeof res);
+                    const selectTable = JSON.parse(res)
+                    createResultTable(selectTable.data);
+                },
+                error: function(res) {
+                    console.log('selectChange.error' + JSON.stringify(res));
+                }
+            })
+        })
     </script>
 </body>
 

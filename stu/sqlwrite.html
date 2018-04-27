@@ -28,10 +28,12 @@
             width: 100%;
             height: 200px;
         }
-        .sqlbutton{
+
+        .sqlbutton {
             margin-left: 10px;
             float: right;
         }
+
     </style>
 </head>
 
@@ -78,14 +80,16 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">sql语言在线编译</h1>
                 <div class="table-responsive">
-                   <div>
-                       <div class="alert alert-success alert-dismissible" role="alert" id="prompt" style="display: none">
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                           <span><strong>Warning!</strong> Better check yourself, you're not looking too good.</span>
+                    <div>
+                        <div class="alert alert-success alert-dismissible" role="alert" id="prompt" style="display: none">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <span><strong>Warning!</strong> Better check yourself, you're not looking too good.</span>
                         </div>
-                   </div>
+                    </div>
                     <div>
                         <textarea rows="5" clos="20" class="sqlinput" id="sqlval"></textarea>
+                        <select id="tableName">
+                        </select>
                         <button type="button" id="submit" class="btn btn-primary sqlbutton">
                           提交
                         </button>
@@ -107,22 +111,22 @@
     </div>
 
 
-     <!-- Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="submitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">提示</h4>
-          </div>
-          <div class="modal-body" id="errorResult">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-<!--            <button type="button" class="btn btn-primary">Save changes</button>-->
-          </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body" id="errorResult">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Bootstrap core JavaScript
@@ -150,12 +154,13 @@
             const params = {
                 code: code
             }
+            initTableData();
             $.ajax({
                 type: "POST",
                 url: `question.php`,
                 data: params,
                 dataType: "json",
-                success: function(res) {
+                success: (res) => {
                     $("body").mLoading("hide");
                     console.log('getQusetion:' + JSON.stringify(res));
                     if (res.status == -1) {
@@ -173,7 +178,7 @@
                 }
             });
         };
-        
+
         function initDom() {
             $question = $('#question');
             $question.find('h2').html(question.title);
@@ -194,22 +199,23 @@
             }
             return "";
         }
+
         function testsql() {
             var sql = $('#sqlval').val();
             console.log('val::' + sql);
-//            const result = resolveSql(sql);
+            //            const result = resolveSql(sql);
             const params = {
-                sql : sql
+                sql: sql
             }
-            console.log(JSON.stringify(params));       
+            console.log(JSON.stringify(params));
             $.ajax({
                 type: 'POST',
                 url: `testsql.php`,
                 data: params,
-                success: function(res) {
+                success: (res) => {
                     const data = JSON.parse(res);
                     $prompt = $('#prompt');
-                   $prompt.show();
+                    $prompt.show();
                     if (data.status == 1) {
                         $prompt.removeClass().addClass('alert alert-success alert-dismissible');
                         $prompt.find('span').remove();
@@ -221,39 +227,41 @@
                         $prompt.removeClass().addClass('alert alert-danger alert-dismissible');
                         $prompt.append('<span><strong>Error!</strong>  ' + data.msg + '</span>');
                     }
+                    initTableName();
                     console.log('success:' + JSON.stringify(data));
                 },
                 error: function(res) {
                     console.log('error:' + JSON.stringify(res));
                 }
-            })
+            });
         }
-        
+
         function createResultTable(data) {
             $resultheader = $('#resultheader');
             $resultTbody = $('#resultTbody');
             $resultheader.empty();
             $resultTbody.empty();
             $HtrTemp = $('<tr></tr>');
+            console.log(JSON.stringify(data))
             if (data.field.length > 0) {
-                for(let i= 0; i < data.field.length; i++) {
+                for (let i = 0; i < data.field.length; i++) {
                     let status = true;
                     if (data.content.length > 0) {
                         status = data.content[0][data.field[i]];
                     }
-                    if(status) {
+                    if (status) {
                         $HtrTemp.append('<th>' + data.field[i] + '</th>');
                     }
                 }
                 $resultheader.append($HtrTemp);
             }
             if (data.content.length > 0) {
-                for(let j = 0; j < data.content.length; j++) {
+                for (let j = 0; j < data.content.length; j++) {
                     $BtrTemp = $('<tr></tr>')
-                    for(let i= 0; i < data.field.length; i++) {
+                    for (let i = 0; i < data.field.length; i++) {
                         let key = data.field[i];
-//                        console.log('key' + key);
-//                        console.log('value:' + JSON.stringify(data.content[j][key]));
+                        //                        console.log('key' + key);
+                        //                        console.log('value:' + JSON.stringify(data.content[j][key]));
                         if (data.content[j][key]) {
                             $BtrTemp.append('<td>' + data.content[j][key] + '</td>');
                         }
@@ -272,9 +280,9 @@
             sqlList = sqlList.filter((item) => { // 去除空项
                 return item.length > 0;
             });
-//            console.log('sqlList' + sqlList);
-            for (let i = 0; i < sqlList.length ; i++) {
-                if(beforeTablename.some(item =>  item == sqlList[i].toLocaleLowerCase())) {
+            //            console.log('sqlList' + sqlList);
+            for (let i = 0; i < sqlList.length; i++) {
+                if (beforeTablename.some(item => item == sqlList[i].toLocaleLowerCase())) {
                     console.log('success' + sqlList[i + 1]);
                     table = sqlList[i + 1].match(/`(.*)`/)[1];
                     break;
@@ -285,7 +293,7 @@
                 type
             }
         }
-        
+
         // 监听事件： 代码编译按钮
         $('#myButton').on('click', function() {
             var $btn = $(this).button('loading')
@@ -293,7 +301,7 @@
             testsql();
             setTimeout(() => {
                 $btn.button('reset');
-            },2000);
+            }, 2000);
         });
 
         $('#submit').on('click', function() {
@@ -324,6 +332,57 @@
                 }
             });
         });
+
+        $selectTable = $('#tableName');
+
+
+        function initTableData() {
+            $.ajax({
+                type: 'GET',
+                url: `getAllTable.php`,
+                success: (res) => {
+                    res = JSON.parse(res);
+                    if (res.status == 1) {
+                        const tableList = [...res.tableList];
+                        creatTableList(tableList);
+                    }
+                    console.log('initTableName.success:' + JSON.stringify(res))
+                },
+                error: function(error) {
+                    console.log('initTableName.error:' + JSON.stringify(error));
+                }
+            })
+        }
+
+        function creatTableList(tableList) {
+            console.log('---- ' + tableList);
+            $selectTable.empty();
+            for (let i = 0; i < tableList.length; i++) {
+                $selectTable.append('<option value="' + tableList[i] + '">' + tableList[i] + '</option>');
+            }
+        }
+        $selectTable.on('change', function() {
+            console.log(typeof $(this).val());
+            const tableName = $(this).val();
+            const params = {
+                tableName: tableName
+            }
+            console.log(JSON.stringify(params))
+            $.  ajax({
+                type: 'POST',
+                data: params,
+                url: `getAllTable.php`,
+                success: function(res) {
+                    console.log('selcetChange' + typeof res);
+                    const selectTable = JSON.parse(res)
+                    createResultTable(selectTable.data);
+                },
+                error: function(res) {
+                    console.log('selectChange.error' + JSON.stringify(res));
+                }
+            })
+        })
+
     </script>
 </body>
 

@@ -1,343 +1,120 @@
-2018-04-14 15:31:40response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:34:23selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:34:23response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:34:39selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:34:39response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:43:50selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:43:50response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:44:14selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:44:14response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:44:36selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 15:44:36response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 15:44:42selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 15:44:42response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 15:44:49selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 15:44:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 15:45:22selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:45:22response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:45:57selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 15:45:57response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 15:46:34selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 15:46:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:01:56selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-14 16:01:56response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u9898\u76ee2","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2"}}
-2018-04-14 16:02:22selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:02:22response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:02:26selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-14 16:02:26response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u9898\u76ee2","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2"}}
-2018-04-14 16:03:09selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:03:09response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:07:38selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-14 16:07:38response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-14 16:08:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:08:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":""}
-2018-04-14 16:08:13selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:08:13response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":""}
-2018-04-14 16:08:58selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:08:58response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:10:28selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:10:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:10:43selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:10:43response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:12:40selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:12:40response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:25:42selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:25:42response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:25:51selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:25:51response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:26:15selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:26:15response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:26:17selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:26:17response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:26:41selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:26:41response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:28:06selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:28:06response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:28:48selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:28:48response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:29:12selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:29:12response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:30:55selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:30:55response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:31:18selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:31:18response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:31:24selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:31:24response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:37:23selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:37:23response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:37:56selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:37:56response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:38:07selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:38:07response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:38:28selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:38:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:40:14selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:40:14response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:40:34selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:40:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:42:52selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:42:52response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:43:26selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:43:26response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:43:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:43:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 16:44:19selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 16:44:19response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 17:27:18selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 17:27:18response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 17:28:01selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 17:28:01response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 17:28:11selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 17:28:11response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 17:51:49selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 17:51:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 17:52:43selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 17:52:43response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 18:01:57selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 18:01:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 19:51:34selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 19:51:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:08:24selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:08:24response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:09:22selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:09:22response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:14:51selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:14:51response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:15:24selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:15:24response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:18:52selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:18:52response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:22:16selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:22:16response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:22:54selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:22:54response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:23:15selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:23:15response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-14 20:29:54selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-14 20:29:54response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 10:57:33selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 10:57:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:02:11selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-15 16:02:11response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-15 16:02:16selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:02:16response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:04:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:04:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:06:04selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:06:04response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:25:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:25:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:46:08selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:46:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:46:37selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:46:37response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:47:15selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:47:15response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:47:23selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:47:23response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:51:54selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:51:54response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:53:46selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:53:46response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:54:38selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:54:38response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:56:47selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:56:47response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 16:59:13selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 16:59:13response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:04:15selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:04:15response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:05:23selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:05:23response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:08:58selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:08:58response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:11:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:11:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:11:49selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:11:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:22:25selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:22:25response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:22:58selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:22:58response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:25:04selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:25:04response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:26:31selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:26:31response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 17:28:30selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 17:28:30response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-15 18:00:44selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-15 18:00:44response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-17 13:56:29selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 13:56:29response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:21:09selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:21:09response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:21:49selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:21:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:23:05selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:23:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:28:33selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:28:33response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:32:03selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:32:03response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:32:35selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:32:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:34:17selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:34:17response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:34:50selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:34:50response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-17 15:35:29selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-17 15:35:29response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 13:20:06selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 13:20:06response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 14:11:28selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 14:11:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 14:14:49selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 14:14:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 17:42:57selectSql=SELECT * FROM `questionlist` where `code` = ''
-2018-04-18 17:42:57response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
-2018-04-18 17:43:05selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 17:43:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 17:43:57selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 17:43:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 17:45:01selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 17:45:01response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 17:45:19selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 17:45:19response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 17:59:38selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-18 17:59:38response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5"}}
-2018-04-18 20:50:59selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 20:50:59response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 20:57:47selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 20:57:47response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 20:59:57selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 20:59:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:00:32selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:00:32response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:02:20selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:02:20response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:02:39selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:02:39response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:03:00selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:03:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:03:38selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:03:38response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:08:26selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:08:26response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:09:19selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:09:19response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:13:43selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:13:43response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:22:01selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:22:01response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:22:27selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:22:27response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:23:13selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:23:13response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:24:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:24:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:25:08selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:25:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-18 21:25:32selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-18 21:25:32response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1"}}
-2018-04-20 16:12:52selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-20 16:12:52response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
-2018-04-20 16:46:34selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-20 16:46:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
-2018-04-20 16:54:39selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-20 16:54:39response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
-2018-04-20 17:06:32selectSql=SELECT * FROM `questionlist` where `code` = '1001'
-2018-04-20 17:06:32response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1001","title":"\u9898\u76ee1","simmessage":"\u7b80\u8981\u4ecb\u7ecd","diffculty":"5","testsql":"\u9898\u76ee1","detmessage":"\u963f\u98de\u6316\u575f","result":""}}
-2018-04-24 11:51:48selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:00:11selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:00:19selectSql=SELECT * FROM `questionlist` where `code` = '2'
-2018-04-24 12:02:23selectSql=SELECT * FROM `questionlist` where `code` = '2'
-2018-04-24 12:02:39selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:02:45selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:04:04selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:04:04response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1","title":"agaga","simmessage":"afdsagasdg","diffculty":"0"}}
-2018-04-24 12:04:43selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:04:43response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1","title":"agaga","simmessage":"afdsagasdg","diffculty":"0"}}
-2018-04-24 12:06:49selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:06:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1","title":"agaga","simmessage":"afdsagasdg","diffculty":"0"}}
-2018-04-24 12:07:55selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 12:07:55response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1","title":"agaga","simmessage":"afdsagasdg","diffculty":"0"}}
-2018-04-24 13:30:11selectSql=SELECT * FROM `questionlist` where `code` = '1'
-2018-04-24 13:30:11response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"code":"1","title":"agaga","simmessage":"afdsagasdg","diffculty":"0"}}
-2018-04-26 13:55:23selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 13:55:23response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 13:55:29selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 13:55:29response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 13:57:31selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 13:57:31response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 13:58:20selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 13:58:20response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 14:00:46selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:00:46response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 14:11:44selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:11:44response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"id\",\"1\":\"ename\",\"2\":\"age\",\"3\":\"job\"}","content":"{\"0\":{\"id\":\"1\",\"ename\":\"bnk\",\"age\":\"10\",\"job\":\"work\"}}"}}
-2018-04-26 14:16:48selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:16:48response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"tutorial_id\",\"1\":\"tutorial_title\",\"2\":\"tutorial_author\",\"3\":\"submission_date\"}","content":""}}
-2018-04-26 14:16:49selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:16:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"tutorial_id\",\"1\":\"tutorial_title\",\"2\":\"tutorial_author\",\"3\":\"submission_date\"}","content":""}}
-2018-04-26 14:21:39selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:21:39response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"{\"0\":\"tutorial_id\",\"1\":\"tutorial_title\",\"2\":\"tutorial_author\",\"3\":\"submission_date\"}","content":""}}
-2018-04-26 14:25:51selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:25:51response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 14:35:47selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:35:47response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 14:42:49selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:42:49response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 14:44:56selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:44:56response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 14:46:14selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:46:14response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 14:59:30selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 14:59:30response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 15:11:30selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 15:11:30response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 15:11:55selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 15:11:55response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 15:12:30selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 15:12:30response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u521b\u5efa\u4e00\u5f20\u8868\uff0c\u8868\u540d\u4e3a\uff1atutorials_tbl","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":""}}
-2018-04-26 15:15:00selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:15:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:18:19selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:18:19response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:19:57selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:19:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:20:52selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:20:52response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:26:20selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:26:20response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:26:21selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:26:21response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:26:22selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:26:22response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:26:25selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:26:25response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1236\",\""}}
-2018-04-26 15:27:38selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:27:38response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\""}}
-2018-04-26 15:27:46selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:27:46response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\""}}
-2018-04-26 15:36:19selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:36:19response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\""}}
-2018-04-26 15:40:28selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:40:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\"tutorial_title\":\"2222\",\"tutorial_author\":\"444444\",\"submission_date\":\"0000-00-00\"}]"}}
-2018-04-26 15:40:29selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:40:29response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\"tutorial_title\":\"2222\",\"tutorial_author\":\"444444\",\"submission_date\":\"0000-00-00\"}]"}}
-2018-04-26 15:41:40selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:41:40response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\"tutorial_title\":\"2222\",\"tutorial_author\":\"444444\",\"submission_date\":\"0000-00-00\"}]"}}
-2018-04-26 15:46:00selectSql=SELECT * FROM `questionlist` where `code` = '10002'
-2018-04-26 15:46:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"2","code":"10002","title":"\u67e5\u8be2tutorials_tbl\u4e2d\u7684\u5168\u90e8\u4fe1\u606f","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"tutorial_id\",\"tutorial_title\",\"tutorial_author\",\"submission_date\"]","content":"[{\"tutorial_id\":\"123\",\"tutorial_title\":\"12222\",\"tutorial_author\":\"12345\",\"submission_date\":\"0000-00-00\"},{\"tutorial_id\":\"1112\",\"tutorial_title\":\"2222\",\"tutorial_author\":\"444444\",\"submission_date\":\"0000-00-00\"}]"}}
-2018-04-26 17:32:08selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 17:32:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"depNo\",\"depName\",\"depMan\"]","content":""}}
-2018-04-26 17:39:09selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 17:39:09response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"depNo\",\"depName\",\"depMan\"]","content":""}}
-2018-04-26 17:52:41selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 17:52:41response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"1","field":"[\"depNo\",\"depName\",\"depMan\"]","content":""}}
-2018-04-26 21:35:39selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 21:35:39response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":null,"content":null}}
-2018-04-26 21:39:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 21:39:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
-2018-04-26 21:42:02selectSql=SELECT * FROM `questionlist` where `code` = '10001'
-2018-04-26 21:42:02response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:02:12selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:02:12response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:08:09selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:08:09response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:09:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:09:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:09:47selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:09:47response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:10:08selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:10:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:10:44selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:10:44response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:11:03selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:11:03response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:11:16selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:11:16response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:12:18selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:12:18response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:12:21selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:12:21response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:12:22selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:12:22response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:13:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:13:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:13:35selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:13:35response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:14:42selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:14:42response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:14:59selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:14:59response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:15:36selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:15:36response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:17:51selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:17:51response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:18:01selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:18:02response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:19:18selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:19:18response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:20:53selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:20:53response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:21:59selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:21:59response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:23:10selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:23:10response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:38:08selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:38:08response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:38:59selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:38:59response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:39:47selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:39:47response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:40:00selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:40:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:40:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:40:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:42:28selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:42:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:42:56selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:42:56response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:43:05selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:43:05response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:48:00selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:48:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:48:50selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:48:50response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:49:21selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:49:21response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:51:28selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:51:28response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:51:34selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:51:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:57:54selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:57:54response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 17:59:46selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 17:59:46response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:00:45selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:00:45response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:01:24selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:01:24response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:06:50selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:06:50response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:07:25selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:07:25response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:08:54selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:08:54response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:09:18selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:09:18response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:10:37selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:10:37response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:12:57selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:12:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:17:00selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:17:00response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:17:27selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:17:27response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:18:02selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:18:02response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:18:31selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:18:31response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:20:24selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:20:24response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:20:24selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 18:20:24response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 18:20:57selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:20:57response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:22:34selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:22:34response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 18:22:51selectSql=SELECT * FROM `questionlist` where `code` = '10001'
+2018-04-27 18:22:51response={"status":1,"msg":"\u67e5\u627e\u6210\u529f","question":{"id":"1","code":"10001","title":"\u9898\u76ee1","simmessage":"\u8fd9\u662f\u7b80\u8981\u4ecb\u7ecd","detmessage":"\u8fd9\u662f\u8be6\u7ec6\u4ecb\u7ecd","result":"\u8fd9\u662f\u7ed3\u679c\u6848\u4f8b","diffculty":"2","field":"[\"id\",\"ename\",\"age\",\"job\"]","content":""}}
+2018-04-27 21:44:27selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:44:27response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 21:45:44selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:45:44response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 21:46:20selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:46:20response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 21:47:19selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:47:19response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 21:48:01selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:48:01response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
+2018-04-27 21:49:05selectSql=SELECT * FROM `questionlist` where `code` = ''
+2018-04-27 21:49:05response={"status":-1,"msg":"\u67e5\u627e\u5931\u8d25","question":""}
