@@ -56,3 +56,35 @@
 2018-04-26 21:30:18response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:30:18"}
 2018-04-26 21:30:26selectSql=UPDATE `questionlist` SET title='题目1', simmessage='这是简要介绍', detmessage='这是详细介绍', result='这是结果案例', diffculty='2' WHERE code = '10001'
 2018-04-26 21:30:26response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-04-26 21:30:26"}
+2018-06-03 18:05:57selectSql=UPDATE `questionlist` SET title='添加内容', simmessage='在表中添加一条信息，影响行数为1', detmessage='创建一张表，表名为stu，字段为：id(主键) int, name varchar,age int,class varchar,(长度自定)插入数据为name='王磊' age=14 class='计算机科学与技术'', result='无', diffculty='1' WHERE code = '10001'
+2018-06-03 18:05:57response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 18:05:57"}
+2018-06-03 21:54:53selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 20的name。', result=''张伟','张磊', '李静', '张芳'', diffculty='2' WHERE code = '10002'
+2018-06-03 21:54:53response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 21:54:53"}
+2018-06-03 21:55:28selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 20的name。', result=''宁涛',‘爱新觉罗玄烨’', diffculty='2' WHERE code = '10002'
+2018-06-03 21:55:28response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 21:55:28"}
+2018-06-03 21:55:44selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 20的name。', result=''宁涛',‘爱新觉罗玄烨’', diffculty='2' WHERE code = '10002'
+2018-06-03 21:55:44response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 21:55:44"}
+2018-06-03 21:55:57selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 20的name。', result=''宁涛',‘爱新觉罗玄烨’', diffculty='2' WHERE code = '10002'
+2018-06-03 21:55:57response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 21:55:57"}
+2018-06-03 21:58:49selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 10的name。', result=''宁涛',‘爱新觉罗玄烨’', diffculty='2' WHERE code = '10002'
+2018-06-03 21:58:49response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 21:58:49"}
+2018-06-03 22:01:51selectSql=UPDATE `questionlist` SET title='查询表中内容', simmessage='查询表中符合要求的内容', detmessage='查询student表中age >= 20的name。', result='张伟，张磊，李静，张芳', diffculty='2' WHERE code = '10002'
+2018-06-03 22:01:51response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:01:51"}
+2018-06-03 22:03:37selectSql=UPDATE `questionlist` SET title='删除数据', simmessage='删除表中一条数据', detmessage='删除teacher表中age = 32的所有数据', result='无', diffculty='2' WHERE code = '10003'
+2018-06-03 22:03:37response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:03:37"}
+2018-06-03 22:09:50selectSql=UPDATE `questionlist` SET title='删除数据', simmessage='删除表中一条数据', detmessage='删除teacher表中age = 32的所有数据，删除后查看表数据，是否成功删除', result='无', diffculty='2' WHERE code = '10003'
+2018-06-03 22:09:50response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:09:50"}
+2018-06-03 22:12:16selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改emp表中id=2的name改为'徐萌'，其他内容不要改动', result='无', diffculty='3' WHERE code = '10004'
+2018-06-03 22:12:16response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 22:12:16"}
+2018-06-03 22:12:34selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改student表中id=2的name改为'徐萌'，其他内容不要改动', result='无', diffculty='2' WHERE code = '10004'
+2018-06-03 22:12:34response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 22:12:34"}
+2018-06-03 22:13:25selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改student表中id=2的name改为'徐萌'，其他内容不要改动', result='无', diffculty='4' WHERE code = '10004'
+2018-06-03 22:13:25response={"status":-1,"msg":"\u6267\u884c\u5931\u8d25","time":"2018-06-03 22:13:25"}
+2018-06-03 22:13:56selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改student表中id=2的name改为"徐萌"，其他内容不要改动', result='无', diffculty='4' WHERE code = '10004'
+2018-06-03 22:13:56response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:13:56"}
+2018-06-03 22:14:08selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改student表中id=2的name改为"徐萌"，其他内容不要改动', result='无', diffculty='4' WHERE code = '10004'
+2018-06-03 22:14:08response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:14:08"}
+2018-06-03 22:14:16selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改student表中id=2的name改为"徐萌"，其他内容不要改动', result='无', diffculty='2' WHERE code = '10004'
+2018-06-03 22:14:16response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:14:16"}
+2018-06-03 22:15:16selectSql=UPDATE `questionlist` SET title='改变数据', simmessage='修改表中所要修改的数据', detmessage='修改emp表中id=2的name改为"徐萌"，其他内容不要改动', result='无', diffculty='2' WHERE code = '10004'
+2018-06-03 22:15:16response={"status":1,"msg":"\u6267\u884c\u6210\u529f","time":"2018-06-03 22:15:16"}

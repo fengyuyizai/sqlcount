@@ -4,7 +4,7 @@
     include '../Config.php';
     $connect = new Connect();
     $db = 'teatest';
-    $connResult = $connect->connect(HOST,USER,PASSWORD,DB);
+    $connResult = $connect->connect(HOST,USER,PASSWORD,$db);
     if ($connResult) {
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $table = $_POST['tableName'];
